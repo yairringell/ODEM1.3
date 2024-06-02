@@ -17,11 +17,12 @@ namespace ODEM1._3
         private MotorStates Axis1_MST; private MotorStates Axis2_MST;
         private double Axis1_FVEL, Axis1_FPOS, Axis2_FVEL, Axis2_FPOS;
         int Axis1 = 0, Axis2 = 1, Axis3 = 2, cornerX = 160, cornerZ = 150;
-        int machineLength,machineHeight,bathLength,bathHeight,bathGap ;
+        int[,] times;
+        int machineLength, machineHeight, bathLength, bathHeight, bathGap;
         int bathOn1, bathOn2, bathOn3, bathOn4, pistonOn1, pistonOn2, pistonOn3, pistonOn4;
-        double xRatio, zRatio,xPos,zPos;
+        double xRatio, zRatio, xPos, zPos;
         int screenX, screenZ;
-        bool Homed = false,Manual=false;
+        bool Homed = false, Manual = false;
 
         
 
@@ -83,6 +84,9 @@ namespace ODEM1._3
                 btnPiston2.BackColor = Color.LightGray;
             }
         }
+
+       
+
         private void btnPiston3_Click(object sender, EventArgs e)
         {
             if (pistonOn3 == 0)
@@ -96,6 +100,9 @@ namespace ODEM1._3
                 btnPiston3.BackColor = Color.LightGray;
             }
         }
+
+        
+
         private void btnPiston4_Click(object sender, EventArgs e)
         {
             if (pistonOn4 == 0)
@@ -123,7 +130,23 @@ namespace ODEM1._3
         }
         private void btnRelease_Click(object sender, EventArgs e)
         {
-            _ACS.WriteVariable(1, "RELEASE_CMD");
+            _ACS.WriteVariable(1, "REL_CMD");
+        }
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(1, "RUN_PROG");
+        }
+        private void btnSetSingle_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(Convert.ToInt16(txtBathT1.Text), "TIMER1");
+            _ACS.WriteVariable(Convert.ToInt16(txtBathT2.Text), "TIMER2");
+            _ACS.WriteVariable(Convert.ToInt16(txtBathT3.Text), "TIMER3");
+            _ACS.WriteVariable(Convert.ToInt16(txtBathT4.Text), "TIMER4");
+            txtBathT1.Text = Convert.ToString(_ACS.ReadVariable("TIMER1"));
+            txtBathT2.Text = Convert.ToString(_ACS.ReadVariable("TIMER2"));
+            txtBathT3.Text = Convert.ToString(_ACS.ReadVariable("TIMER3"));
+            txtBathT4.Text = Convert.ToString(_ACS.ReadVariable("TIMER4"));
+            _ACS.WriteVariable(1, "SET_SINGLE");
         }
         private void btnManual_Click(object sender, EventArgs e)
         {
@@ -328,6 +351,10 @@ namespace ODEM1._3
                 screenZ = Convert.ToInt32(zPos * xRatio);
                 lblScreenX.Text = Convert.ToString(screenX);
 
+                lblT1.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T1"))) + "  [min]";
+                lblT2.Text = "Time Left:   " +Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T2"))) + "  [min]";
+                lblT3.Text = "Time Left:   " +Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T3"))) + "  [min]";
+                lblT4.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T4"))) + "  [min]";
 
                 if (Homed)
                 {
@@ -389,9 +416,14 @@ namespace ODEM1._3
             btnSensor3.Location = new Point(cornerX + 3 * bathLength + 3 * bathGap, cornerZ + machineHeight);
             btnSensor4.Location = new Point(cornerX + 4 * bathLength + 4 * bathGap, cornerZ + machineHeight);
             btnSensorOut.Location = new Point(cornerX + 5 * bathLength + 5 * bathGap, cornerZ + machineHeight);
+           
+            lblT1.Location= new Point(cornerX + 1 * bathLength + 1 * bathGap+5, cornerZ + machineHeight+90);
+            lblT2.Location = new Point(cornerX + 2 * bathLength + 2 * bathGap+5, cornerZ + machineHeight + 90);
+            lblT3.Location = new Point(cornerX + 3 * bathLength + 3 * bathGap+5, cornerZ + machineHeight + 90);
+            lblT4.Location = new Point(cornerX + 4 * bathLength + 4 * bathGap + 5, cornerZ + machineHeight + 90);
 
             btnPiston1.BackColor = Color.LightGray;
-            btnPiston2.BackColor = Color.LightGray;
+            btnPiston2.BackColor = Color.LightGray; 
             btnPiston3.BackColor = Color.LightGray;
             btnPiston4.BackColor = Color.LightGray;
         }
