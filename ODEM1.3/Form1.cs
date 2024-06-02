@@ -115,11 +115,11 @@ namespace ODEM1._3
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            _ACS.WriteVariable(1, "NEXT_X_CMD");
+            _ACS.WriteVariable(1, "NEXT_CMD");
         }
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            _ACS.WriteVariable(1, "PREV_X_CMD");
+            _ACS.WriteVariable(1, "PREV_CMD");
         }
         private void btnRelease_Click(object sender, EventArgs e)
         {

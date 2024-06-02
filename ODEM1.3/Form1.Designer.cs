@@ -71,6 +71,7 @@
             this.btnProg = new System.Windows.Forms.Button();
             this.grpProg = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSetMulti = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -85,6 +86,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSetSingle = new System.Windows.Forms.Button();
             this.btnAir4 = new System.Windows.Forms.Button();
             this.btnEngPist4 = new System.Windows.Forms.Button();
             this.txtBathT4 = new System.Windows.Forms.TextBox();
@@ -104,14 +106,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblPosZ = new System.Windows.Forms.Label();
             this.grpButtons = new System.Windows.Forms.GroupBox();
+            this.lblScreenX = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblRatioX = new System.Windows.Forms.Label();
+            this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
-            this.fggfgf = new System.Windows.Forms.Label();
-            this.lblRatioX = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblScreenX = new System.Windows.Forms.Label();
-            this.btnSetSingle = new System.Windows.Forms.Button();
-            this.btnSetMulti = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -147,9 +147,10 @@
             this.txtIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIP.Location = new System.Drawing.Point(6, 29);
             this.txtIP.Name = "txtIP";
+            this.txtIP.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIP.Size = new System.Drawing.Size(118, 24);
             this.txtIP.TabIndex = 0;
-            this.txtIP.Text = "127.0.0.1";
+            this.txtIP.Text = "192.168.120.22";
             // 
             // grpMain
             // 
@@ -565,6 +566,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Multi Basket";
             // 
+            // btnSetMulti
+            // 
+            this.btnSetMulti.Location = new System.Drawing.Point(25, 202);
+            this.btnSetMulti.Name = "btnSetMulti";
+            this.btnSetMulti.Size = new System.Drawing.Size(122, 41);
+            this.btnSetMulti.TabIndex = 14;
+            this.btnSetMulti.Text = "SET";
+            this.btnSetMulti.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -711,6 +721,15 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Single Basket";
+            // 
+            // btnSetSingle
+            // 
+            this.btnSetSingle.Location = new System.Drawing.Point(25, 208);
+            this.btnSetSingle.Name = "btnSetSingle";
+            this.btnSetSingle.Size = new System.Drawing.Size(122, 41);
+            this.btnSetSingle.TabIndex = 13;
+            this.btnSetSingle.Text = "SET";
+            this.btnSetSingle.UseVisualStyleBackColor = true;
             // 
             // btnAir4
             // 
@@ -894,6 +913,46 @@
             this.grpButtons.TabIndex = 8;
             this.grpButtons.TabStop = false;
             // 
+            // lblScreenX
+            // 
+            this.lblScreenX.AutoSize = true;
+            this.lblScreenX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScreenX.Location = new System.Drawing.Point(364, 49);
+            this.lblScreenX.Name = "lblScreenX";
+            this.lblScreenX.Size = new System.Drawing.Size(16, 18);
+            this.lblScreenX.TabIndex = 13;
+            this.lblScreenX.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(278, 48);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 18);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "screenX: ";
+            // 
+            // lblRatioX
+            // 
+            this.lblRatioX.AutoSize = true;
+            this.lblRatioX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRatioX.Location = new System.Drawing.Point(363, 22);
+            this.lblRatioX.Name = "lblRatioX";
+            this.lblRatioX.Size = new System.Drawing.Size(16, 18);
+            this.lblRatioX.TabIndex = 11;
+            this.lblRatioX.Text = "0";
+            // 
+            // fggfgf
+            // 
+            this.fggfgf.AutoSize = true;
+            this.fggfgf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fggfgf.Location = new System.Drawing.Point(278, 22);
+            this.fggfgf.Name = "fggfgf";
+            this.fggfgf.Size = new System.Drawing.Size(59, 18);
+            this.fggfgf.TabIndex = 11;
+            this.fggfgf.Text = "ratio X: ";
+            // 
             // btnHome
             // 
             this.btnHome.Location = new System.Drawing.Point(285, 24);
@@ -914,64 +973,6 @@
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
-            // fggfgf
-            // 
-            this.fggfgf.AutoSize = true;
-            this.fggfgf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fggfgf.Location = new System.Drawing.Point(278, 22);
-            this.fggfgf.Name = "fggfgf";
-            this.fggfgf.Size = new System.Drawing.Size(59, 18);
-            this.fggfgf.TabIndex = 11;
-            this.fggfgf.Text = "ratio X: ";
-            // 
-            // lblRatioX
-            // 
-            this.lblRatioX.AutoSize = true;
-            this.lblRatioX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRatioX.Location = new System.Drawing.Point(363, 22);
-            this.lblRatioX.Name = "lblRatioX";
-            this.lblRatioX.Size = new System.Drawing.Size(16, 18);
-            this.lblRatioX.TabIndex = 11;
-            this.lblRatioX.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(278, 48);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 18);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "screenX: ";
-            // 
-            // lblScreenX
-            // 
-            this.lblScreenX.AutoSize = true;
-            this.lblScreenX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScreenX.Location = new System.Drawing.Point(364, 49);
-            this.lblScreenX.Name = "lblScreenX";
-            this.lblScreenX.Size = new System.Drawing.Size(16, 18);
-            this.lblScreenX.TabIndex = 13;
-            this.lblScreenX.Text = "0";
-            // 
-            // btnSetSingle
-            // 
-            this.btnSetSingle.Location = new System.Drawing.Point(25, 208);
-            this.btnSetSingle.Name = "btnSetSingle";
-            this.btnSetSingle.Size = new System.Drawing.Size(122, 41);
-            this.btnSetSingle.TabIndex = 13;
-            this.btnSetSingle.Text = "SET";
-            this.btnSetSingle.UseVisualStyleBackColor = true;
-            // 
-            // btnSetMulti
-            // 
-            this.btnSetMulti.Location = new System.Drawing.Point(25, 202);
-            this.btnSetMulti.Name = "btnSetMulti";
-            this.btnSetMulti.Size = new System.Drawing.Size(122, 41);
-            this.btnSetMulti.TabIndex = 14;
-            this.btnSetMulti.Text = "SET";
-            this.btnSetMulti.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -985,8 +986,8 @@
             this.Controls.Add(this.lblPosX);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grpProg);
             this.Controls.Add(this.grpMain);
+            this.Controls.Add(this.grpProg);
             this.Name = "Form1";
             this.Text = "ODEM1.3";
             this.Load += new System.EventHandler(this.Form1_Load);
