@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -17,11 +18,12 @@ namespace ODEM1._3
         private MotorStates Axis1_MST; private MotorStates Axis2_MST;
         private double Axis1_FVEL, Axis1_FPOS, Axis2_FVEL, Axis2_FPOS;
         int Axis1 = 0, Axis2 = 1, Axis3 = 2, cornerX = 160, cornerZ = 150;
-        int[,] times;
+        double[,] single = new double[10,10];
         int machineLength, machineHeight, bathLength, bathHeight, bathGap;
         int bathOn1, bathOn2, bathOn3, bathOn4, pistonOn1, pistonOn2, pistonOn3, pistonOn4;
-        double xRatio, zRatio, xPos, zPos;
+        double xRatio, zRatio, xPos, zPos, single_prog_num, multi_prog_num;
         int screenX, screenZ;
+        object resault;
         bool Homed = false, Manual = false;
 
         
@@ -34,6 +36,7 @@ namespace ODEM1._3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             WindowState = FormWindowState.Maximized;
             machineLength = this.Size.Width - 300;
             xRatio = Convert.ToDouble(machineLength) /3000;
@@ -54,9 +57,11 @@ namespace ODEM1._3
             //grpMain.Visible = false;
             btnHome.Enabled = false;
             grpJog.Enabled = false;
-            
 
+            
             buttons();
+           
+
         }
         private void btnPiston1_Click(object sender, EventArgs e)
         {
@@ -85,8 +90,6 @@ namespace ODEM1._3
             }
         }
 
-       
-
         private void btnPiston3_Click(object sender, EventArgs e)
         {
             if (pistonOn3 == 0)
@@ -101,7 +104,23 @@ namespace ODEM1._3
             }
         }
 
-        
+        private void btnProg1_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(1, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnProg2_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(2, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnProg3_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(3, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
 
         private void btnPiston4_Click(object sender, EventArgs e)
         {
@@ -138,15 +157,20 @@ namespace ODEM1._3
         }
         private void btnSetSingle_Click(object sender, EventArgs e)
         {
-            _ACS.WriteVariable(Convert.ToInt16(txtBathT1.Text), "TIMER1");
-            _ACS.WriteVariable(Convert.ToInt16(txtBathT2.Text), "TIMER2");
-            _ACS.WriteVariable(Convert.ToInt16(txtBathT3.Text), "TIMER3");
-            _ACS.WriteVariable(Convert.ToInt16(txtBathT4.Text), "TIMER4");
-            txtBathT1.Text = Convert.ToString(_ACS.ReadVariable("TIMER1"));
-            txtBathT2.Text = Convert.ToString(_ACS.ReadVariable("TIMER2"));
-            txtBathT3.Text = Convert.ToString(_ACS.ReadVariable("TIMER3"));
-            txtBathT4.Text = Convert.ToString(_ACS.ReadVariable("TIMER4"));
+            single[((int)single_prog_num), 1] = Convert.ToInt16(txtBathT1.Text);
+            single[((int)single_prog_num), 2] = Convert.ToInt16(txtBathT2.Text);
+            single[((int)single_prog_num), 3] = Convert.ToInt16(txtBathT3.Text);
+            single[((int)single_prog_num), 4] = Convert.ToInt16(txtBathT4.Text);
+            if (chkPist1.Checked) { single[((int)single_prog_num), 6] = 1; } else { single[((int)single_prog_num), 6] = 0; }
+            if (chkPist2.Checked) { single[((int)single_prog_num), 7] = 1; } else { single[((int)single_prog_num), 7] = 0; }
+            if (chkPist3.Checked) { single[((int)single_prog_num), 8] = 1; } else { single[((int)single_prog_num), 8] = 0; }
+            if (chkPist4.Checked) { single[((int)single_prog_num), 9] = 1; } else { single[((int)single_prog_num), 9] = 0; }
+
+            _ACS.WriteVariable(single_prog_num, "SINGLE_PROG_NUM");
+            _ACS.WriteVariable(single, "SINGLE");
             _ACS.WriteVariable(1, "SET_SINGLE");
+            read_single_prog();
+
         }
         private void btnManual_Click(object sender, EventArgs e)
         {
@@ -166,7 +190,7 @@ namespace ODEM1._3
                                 );
                     btnConnect.BackColor = Color.LightGreen;
                     btnHome.Enabled = true;
-
+                    read_single_prog();
 
 
                 }
@@ -219,11 +243,16 @@ namespace ODEM1._3
         {
             grpProg.Visible = false;
             grpMain.Visible = true;
+            
         }
         private void btnProg_Click(object sender, EventArgs e)
         {
             grpProg.Visible = true;
             grpMain.Visible = false;
+            
+           
+            
+
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -351,10 +380,15 @@ namespace ODEM1._3
                 screenZ = Convert.ToInt32(zPos * xRatio);
                 lblScreenX.Text = Convert.ToString(screenX);
 
-                lblT1.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T1"))) + "  [min]";
-                lblT2.Text = "Time Left:   " +Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T2"))) + "  [min]";
-                lblT3.Text = "Time Left:   " +Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T3"))) + "  [min]";
-                lblT4.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T4"))) + "  [min]";
+                lblT1.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T1"))) + "   [min]";
+                lblT2.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T2"))) + "   [min]";
+                lblT3.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T3"))) + "   [min]";
+                lblT4.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T4"))) + "   [min]";
+
+                if (Convert.ToDouble(_ACS.ReadVariable("PIST1"))==1) { btnPiston1.BackColor = Color.LightBlue; } else { btnPiston1.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("PIST2")) == 1) { btnPiston2.BackColor = Color.LightBlue; } else { btnPiston2.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("PIST3")) == 1) { btnPiston3.BackColor = Color.LightBlue; } else { btnPiston3.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("PIST4")) == 1) { btnPiston4.BackColor = Color.LightBlue; } else { btnPiston4.BackColor = Color.LightGray; }
 
                 if (Homed)
                 {
@@ -426,6 +460,30 @@ namespace ODEM1._3
             btnPiston2.BackColor = Color.LightGray; 
             btnPiston3.BackColor = Color.LightGray;
             btnPiston4.BackColor = Color.LightGray;
+        }
+
+        private void read_single_prog()
+        {
+            resault = _ACS.ReadVariable("SINGLE");
+            single = resault as double[,];
+            single_prog_num = Convert.ToDouble (_ACS.ReadVariable("SINGLE_PROG_NUM"));
+            
+            if (single_prog_num==1) { btnProg1.BackColor = Color.LightBlue; btnProg2.BackColor = Color.LightGray; btnProg3.BackColor = Color.LightGray; }
+            if (single_prog_num == 2) { btnProg1.BackColor = Color.LightGray; btnProg2.BackColor = Color.LightBlue; btnProg3.BackColor = Color.LightGray; }
+            if (single_prog_num == 3) { btnProg1.BackColor = Color.LightGray; btnProg2.BackColor = Color.LightGray; btnProg3.BackColor = Color.LightBlue; }
+
+
+            txtBathT1.Text = Convert.ToString(single[((int)single_prog_num), 1]);
+            txtBathT2.Text = Convert.ToString(single[((int)single_prog_num), 2]);
+            txtBathT3.Text = Convert.ToString(single[((int)single_prog_num), 3]);
+            txtBathT4.Text = Convert.ToString(single[((int)single_prog_num), 4]);
+
+            if (single[((int)single_prog_num), 6]==0) { chkPist1.Checked = false; } else { chkPist1.Checked = true; }
+            if (single[((int)single_prog_num), 7] == 0) { chkPist2.Checked = false; } else { chkPist2.Checked = true; }
+            if (single[((int)single_prog_num), 8] == 0) { chkPist3.Checked = false; } else { chkPist3.Checked = true; }
+            if (single[((int)single_prog_num), 9] == 0) { chkPist4.Checked = false; } else { chkPist4.Checked = true; }
+
+
         }
     }
 }
