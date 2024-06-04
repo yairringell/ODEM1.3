@@ -19,15 +19,16 @@ namespace ODEM1._3
         private double Axis1_FVEL, Axis1_FPOS, Axis2_FVEL, Axis2_FPOS;
         int Axis1 = 0, Axis2 = 1, Axis3 = 2, cornerX = 160, cornerZ = 150;
         double[,] single = new double[10,10];
+        double[,] multi = new double[10, 50];
+
         int machineLength, machineHeight, bathLength, bathHeight, bathGap;
         int bathOn1, bathOn2, bathOn3, bathOn4, pistonOn1, pistonOn2, pistonOn3, pistonOn4;
         double xRatio, zRatio, xPos, zPos, single_prog_num, multi_prog_num;
         int screenX, screenZ;
-        object resault;
+        object resault,resault_multi;
         bool Homed = false, Manual = false;
 
         
-
         public Form1()
         {
             InitializeComponent();
@@ -89,7 +90,6 @@ namespace ODEM1._3
                 btnPiston2.BackColor = Color.LightGray;
             }
         }
-
         private void btnPiston3_Click(object sender, EventArgs e)
         {
             if (pistonOn3 == 0)
@@ -103,25 +103,21 @@ namespace ODEM1._3
                 btnPiston3.BackColor = Color.LightGray;
             }
         }
-
         private void btnProg1_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(1, "SINGLE_PROG_NUM");
             read_single_prog();
         }
-
         private void btnProg2_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(2, "SINGLE_PROG_NUM");
             read_single_prog();
         }
-
         private void btnProg3_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(3, "SINGLE_PROG_NUM");
             read_single_prog();
         }
-
         private void btnPiston4_Click(object sender, EventArgs e)
         {
             if (pistonOn4 == 0)
@@ -135,6 +131,25 @@ namespace ODEM1._3
                 btnPiston4.BackColor = Color.LightGray;
             }
         }
+
+        private void btnProg21_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(1, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnProg22_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(2, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnProg23_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(3, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
         private void btnGrab_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(1, "GRAB_CMD");
@@ -155,12 +170,61 @@ namespace ODEM1._3
         {
             _ACS.WriteVariable(1, "RUN_PROG");
         }
+
+        private void btnSetMulti_Click(object sender, EventArgs e)
+        {
+            multi[((int)multi_prog_num), 1] = Convert.ToInt16(txtBathT11.Text);
+            multi[((int)multi_prog_num), 2] = Convert.ToInt16(txtBathT21.Text);
+            multi[((int)multi_prog_num), 3] = Convert.ToInt16(txtBathT31.Text);
+            multi[((int)multi_prog_num), 4] = Convert.ToInt16(txtBathT41.Text);
+            if (chk21Air.Checked)  { multi[((int)multi_prog_num), 5] = 1; } else { multi[((int)multi_prog_num), 5] = 0; }
+            if (chkPist11.Checked) { multi[((int)multi_prog_num), 6] = 1; } else { multi[((int)multi_prog_num), 6] = 0; }
+            if (chkPist21.Checked) { multi[((int)multi_prog_num), 7] = 1; } else { multi[((int)multi_prog_num), 7] = 0; }
+            if (chkPist31.Checked) { multi[((int)multi_prog_num), 8] = 1; } else { multi[((int)multi_prog_num), 8] = 0; }
+            if (chkPist41.Checked) { multi[((int)multi_prog_num), 9] = 1; } else { multi[((int)multi_prog_num), 9] = 0; }
+
+            multi[((int)multi_prog_num), 11] = Convert.ToInt16(txtBathT12.Text);
+            multi[((int)multi_prog_num), 12] = Convert.ToInt16(txtBathT22.Text);
+            multi[((int)multi_prog_num), 13] = Convert.ToInt16(txtBathT32.Text);
+            multi[((int)multi_prog_num), 14] = Convert.ToInt16(txtBathT42.Text);
+            if (chk22Air.Checked ) { multi[((int)multi_prog_num), 15] =1; } else { multi[((int)multi_prog_num), 15] = 0; }
+            if (chkPist12.Checked) { multi[((int)multi_prog_num), 16] =1; } else { multi[((int)multi_prog_num), 16] = 0; }
+            if (chkPist22.Checked) { multi[((int)multi_prog_num), 17] =1; } else { multi[((int)multi_prog_num), 17] = 0; }
+            if (chkPist32.Checked) { multi[((int)multi_prog_num), 18] =1; } else { multi[((int)multi_prog_num), 18] = 0; }
+            if (chkPist42.Checked) { multi[((int)multi_prog_num), 19] =1; } else { multi[((int)multi_prog_num), 19] = 0; }
+
+            multi[((int)multi_prog_num), 21] = Convert.ToInt16(txtBathT13.Text);
+            multi[((int)multi_prog_num), 22] = Convert.ToInt16(txtBathT23.Text);
+            multi[((int)multi_prog_num), 23] = Convert.ToInt16(txtBathT33.Text);
+            multi[((int)multi_prog_num), 24] = Convert.ToInt16(txtBathT43.Text);
+            if (chk23Air.Checked) { multi[((int)multi_prog_num), 25] =  1; } else{ multi[((int)multi_prog_num),25] = 0; }
+            if (chkPist13.Checked) { multi[((int)multi_prog_num),26] = 1; } else { multi[((int)multi_prog_num),26] = 0; }
+            if (chkPist23.Checked) { multi[((int)multi_prog_num),27] = 1; } else { multi[((int)multi_prog_num),27] = 0; }
+            if (chkPist33.Checked) { multi[((int)multi_prog_num),28] = 1; } else { multi[((int)multi_prog_num),28] = 0; }
+            if (chkPist43.Checked) { multi[((int)multi_prog_num),29] = 1; } else { multi[((int)multi_prog_num),29] = 0; }
+
+            multi[((int)multi_prog_num), 31] = Convert.ToInt16(txtBathT14.Text);
+            multi[((int)multi_prog_num), 32] = Convert.ToInt16(txtBathT24.Text);
+            multi[((int)multi_prog_num), 33] = Convert.ToInt16(txtBathT34.Text);
+            multi[((int)multi_prog_num), 34] = Convert.ToInt16(txtBathT44.Text);
+            if (chk24Air.Checked) { multi[((int)multi_prog_num), 35] = 1; } else { multi[((int)multi_prog_num), 35] = 0; }
+            if (chkPist14.Checked) { multi[((int)multi_prog_num),36] = 1; } else { multi[((int)multi_prog_num), 36] = 0; }
+            if (chkPist24.Checked) { multi[((int)multi_prog_num),37] = 1; } else { multi[((int)multi_prog_num), 37] = 0; }
+            if (chkPist34.Checked) { multi[((int)multi_prog_num),38] = 1; } else { multi[((int)multi_prog_num), 38] = 0; }
+            if (chkPist44.Checked) { multi[((int)multi_prog_num),39] = 1; } else { multi[((int)multi_prog_num), 39] = 0; }
+
+            _ACS.WriteVariable(multi_prog_num, "MULTI_PROG_NUM");
+            _ACS.WriteVariable(multi, "MULTI");
+            _ACS.WriteVariable(1, "SET_MULTI");
+            read_multi_prog();
+        }
         private void btnSetSingle_Click(object sender, EventArgs e)
         {
             single[((int)single_prog_num), 1] = Convert.ToInt16(txtBathT1.Text);
             single[((int)single_prog_num), 2] = Convert.ToInt16(txtBathT2.Text);
             single[((int)single_prog_num), 3] = Convert.ToInt16(txtBathT3.Text);
             single[((int)single_prog_num), 4] = Convert.ToInt16(txtBathT4.Text);
+            if (chk1Air.Checked) { single[((int)single_prog_num), 5] = 1; } else { single[((int)single_prog_num), 5] = 0; }
             if (chkPist1.Checked) { single[((int)single_prog_num), 6] = 1; } else { single[((int)single_prog_num), 6] = 0; }
             if (chkPist2.Checked) { single[((int)single_prog_num), 7] = 1; } else { single[((int)single_prog_num), 7] = 0; }
             if (chkPist3.Checked) { single[((int)single_prog_num), 8] = 1; } else { single[((int)single_prog_num), 8] = 0; }
@@ -478,10 +542,66 @@ namespace ODEM1._3
             txtBathT3.Text = Convert.ToString(single[((int)single_prog_num), 3]);
             txtBathT4.Text = Convert.ToString(single[((int)single_prog_num), 4]);
 
-            if (single[((int)single_prog_num), 6]==0) { chkPist1.Checked = false; } else { chkPist1.Checked = true; }
+            if (single[((int)single_prog_num), 5] == 0) { chk1Air.Checked = false; } else { chk1Air.Checked = true; }
+            if (single[((int)single_prog_num), 6]==0) { chkPist1.Checked = false; } else { chkPist1.Checked = true;   }
             if (single[((int)single_prog_num), 7] == 0) { chkPist2.Checked = false; } else { chkPist2.Checked = true; }
             if (single[((int)single_prog_num), 8] == 0) { chkPist3.Checked = false; } else { chkPist3.Checked = true; }
             if (single[((int)single_prog_num), 9] == 0) { chkPist4.Checked = false; } else { chkPist4.Checked = true; }
+        }
+        private void read_multi_prog()
+        {
+            resault_multi = _ACS.ReadVariable("MULTI");
+            multi = resault_multi as double[,];
+            multi_prog_num = Convert.ToDouble(_ACS.ReadVariable("MULTI_PROG_NUM"));
+
+            if (multi_prog_num == 1) { btnProg21.BackColor = Color.LightBlue; btnProg22.BackColor = Color.LightGray; btnProg23.BackColor = Color.LightGray; }
+            if (multi_prog_num == 2) { btnProg21.BackColor = Color.LightGray; btnProg22.BackColor = Color.LightBlue; btnProg23.BackColor = Color.LightGray; }
+            if (multi_prog_num == 3) { btnProg21.BackColor = Color.LightGray; btnProg22.BackColor = Color.LightGray; btnProg23.BackColor = Color.LightBlue; }
+
+
+            txtBathT11.Text = Convert.ToString(multi[((int)multi_prog_num), 1]);
+            txtBathT21.Text = Convert.ToString(multi[((int)multi_prog_num), 2]);
+            txtBathT31.Text = Convert.ToString(multi[((int)multi_prog_num), 3]);
+            txtBathT41.Text = Convert.ToString(multi[((int)multi_prog_num), 4]);
+
+            if (multi[((int)multi_prog_num), 5] == 0) {  chk21Air.Checked = false; } else { chk21Air.Checked = true; }
+            if (multi[((int)multi_prog_num), 6] == 0) { chkPist11.Checked = false; } else { chkPist11.Checked = true; }
+            if (multi[((int)multi_prog_num), 7] == 0) { chkPist21.Checked = false; } else { chkPist21.Checked = true; }
+            if (multi[((int)multi_prog_num), 8] == 0) { chkPist31.Checked = false; } else { chkPist31.Checked = true; }
+            if (multi[((int)multi_prog_num), 9] == 0) { chkPist41.Checked = false; } else { chkPist41.Checked = true; }
+
+            txtBathT12.Text = Convert.ToString(multi[((int)multi_prog_num), 11]);
+            txtBathT22.Text = Convert.ToString(multi[((int)multi_prog_num), 12]);
+            txtBathT32.Text = Convert.ToString(multi[((int)multi_prog_num), 13]);
+            txtBathT42.Text = Convert.ToString(multi[((int)multi_prog_num), 14]);
+
+            if (multi[((int)multi_prog_num), 15] == 0) { chk22Air.Checked = false; } else { chk22Air.Checked = true; }
+            if (multi[((int)multi_prog_num), 16] == 0) { chkPist12.Checked = false; } else { chkPist12.Checked = true; }
+            if (multi[((int)multi_prog_num), 17] == 0) { chkPist22.Checked = false; } else { chkPist22.Checked = true; }
+            if (multi[((int)multi_prog_num), 18] == 0) { chkPist32.Checked = false; } else { chkPist32.Checked = true; }
+            if (multi[((int)multi_prog_num), 19] == 0) { chkPist42.Checked = false; } else { chkPist42.Checked = true; }
+
+            txtBathT13.Text = Convert.ToString(multi[((int)multi_prog_num), 21]);
+            txtBathT23.Text = Convert.ToString(multi[((int)multi_prog_num), 22]);
+            txtBathT33.Text = Convert.ToString(multi[((int)multi_prog_num), 23]);
+            txtBathT43.Text = Convert.ToString(multi[((int)multi_prog_num), 24]);
+
+            if (multi[((int)multi_prog_num), 25] == 0) { chk23Air.Checked = false; } else { chk23Air.Checked = true; }
+            if (multi[((int)multi_prog_num), 26] == 0) { chkPist13.Checked = false; } else { chkPist13.Checked = true; }
+            if (multi[((int)multi_prog_num), 27] == 0) { chkPist23.Checked = false; } else { chkPist23.Checked = true; }
+            if (multi[((int)multi_prog_num), 28] == 0) { chkPist33.Checked = false; } else { chkPist33.Checked = true; }
+            if (multi[((int)multi_prog_num), 29] == 0) { chkPist43.Checked = false; } else { chkPist43.Checked = true; }
+
+            txtBathT14.Text = Convert.ToString(multi[((int)multi_prog_num), 31]);
+            txtBathT24.Text = Convert.ToString(multi[((int)multi_prog_num), 32]);
+            txtBathT34.Text = Convert.ToString(multi[((int)multi_prog_num), 33]);
+            txtBathT44.Text = Convert.ToString(multi[((int)multi_prog_num), 34]);
+
+            if (multi[((int)multi_prog_num), 35] == 0) { chk24Air.Checked = false; } else { chk24Air.Checked = true; }
+            if (multi[((int)multi_prog_num), 36] == 0) { chkPist14.Checked = false; } else { chkPist14.Checked = true; }
+            if (multi[((int)multi_prog_num), 37] == 0) { chkPist24.Checked = false; } else { chkPist24.Checked = true; }
+            if (multi[((int)multi_prog_num), 38] == 0) { chkPist34.Checked = false; } else { chkPist34.Checked = true; }
+            if (multi[((int)multi_prog_num), 39] == 0) { chkPist44.Checked = false; } else { chkPist44.Checked = true; }
 
 
         }

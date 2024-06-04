@@ -75,16 +75,64 @@
             this.btnProg = new System.Windows.Forms.Button();
             this.grpProg = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnProg23 = new System.Windows.Forms.Button();
+            this.chkPist44 = new System.Windows.Forms.CheckBox();
+            this.btnProg22 = new System.Windows.Forms.Button();
+            this.btnProg21 = new System.Windows.Forms.Button();
+            this.chk24Air = new System.Windows.Forms.CheckBox();
+            this.chkPist34 = new System.Windows.Forms.CheckBox();
+            this.chkPist24 = new System.Windows.Forms.CheckBox();
+            this.chkPist14 = new System.Windows.Forms.CheckBox();
+            this.txtBathT44 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtBathT34 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtBathT24 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtBathT14 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.chkPist43 = new System.Windows.Forms.CheckBox();
+            this.chk23Air = new System.Windows.Forms.CheckBox();
+            this.chkPist33 = new System.Windows.Forms.CheckBox();
+            this.chkPist23 = new System.Windows.Forms.CheckBox();
+            this.chkPist13 = new System.Windows.Forms.CheckBox();
+            this.txtBathT43 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtBathT33 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtBathT23 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtBathT13 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.chkPist42 = new System.Windows.Forms.CheckBox();
+            this.chk22Air = new System.Windows.Forms.CheckBox();
+            this.chkPist32 = new System.Windows.Forms.CheckBox();
+            this.chkPist22 = new System.Windows.Forms.CheckBox();
+            this.chkPist12 = new System.Windows.Forms.CheckBox();
+            this.txtBathT42 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBathT32 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtBathT22 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtBathT12 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.chkPist41 = new System.Windows.Forms.CheckBox();
+            this.chk21Air = new System.Windows.Forms.CheckBox();
+            this.chkPist31 = new System.Windows.Forms.CheckBox();
+            this.chkPist21 = new System.Windows.Forms.CheckBox();
             this.btnSetMulti = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chkPist11 = new System.Windows.Forms.CheckBox();
+            this.txtBathT41 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBathT31 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBathT21 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBathT11 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chk1Air = new System.Windows.Forms.CheckBox();
             this.chkPist4 = new System.Windows.Forms.CheckBox();
             this.chkPist3 = new System.Windows.Forms.CheckBox();
             this.chkPist2 = new System.Windows.Forms.CheckBox();
@@ -113,54 +161,6 @@
             this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
-            this.chk1Air = new System.Windows.Forms.CheckBox();
-            this.chk21Air = new System.Windows.Forms.CheckBox();
-            this.chkPist41 = new System.Windows.Forms.CheckBox();
-            this.chkPist31 = new System.Windows.Forms.CheckBox();
-            this.chkPist21 = new System.Windows.Forms.CheckBox();
-            this.chkPist11 = new System.Windows.Forms.CheckBox();
-            this.chkPist42 = new System.Windows.Forms.CheckBox();
-            this.chk22Air = new System.Windows.Forms.CheckBox();
-            this.chkPist32 = new System.Windows.Forms.CheckBox();
-            this.chkPist22 = new System.Windows.Forms.CheckBox();
-            this.chkPist12 = new System.Windows.Forms.CheckBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.chkPist44 = new System.Windows.Forms.CheckBox();
-            this.chk24Air = new System.Windows.Forms.CheckBox();
-            this.chkPist34 = new System.Windows.Forms.CheckBox();
-            this.chkPist24 = new System.Windows.Forms.CheckBox();
-            this.chkPist14 = new System.Windows.Forms.CheckBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.chkPist43 = new System.Windows.Forms.CheckBox();
-            this.chk23Air = new System.Windows.Forms.CheckBox();
-            this.chkPist33 = new System.Windows.Forms.CheckBox();
-            this.chkPist23 = new System.Windows.Forms.CheckBox();
-            this.chkPist13 = new System.Windows.Forms.CheckBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.btnProg23 = new System.Windows.Forms.Button();
-            this.btnProg22 = new System.Windows.Forms.Button();
-            this.btnProg21 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -655,39 +655,39 @@
             this.groupBox3.Controls.Add(this.chkPist34);
             this.groupBox3.Controls.Add(this.chkPist24);
             this.groupBox3.Controls.Add(this.chkPist14);
-            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Controls.Add(this.txtBathT44);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.Controls.Add(this.txtBathT34);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.textBox11);
+            this.groupBox3.Controls.Add(this.txtBathT24);
             this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.txtBathT14);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.chkPist43);
             this.groupBox3.Controls.Add(this.chk23Air);
             this.groupBox3.Controls.Add(this.chkPist33);
             this.groupBox3.Controls.Add(this.chkPist23);
             this.groupBox3.Controls.Add(this.chkPist13);
-            this.groupBox3.Controls.Add(this.textBox13);
+            this.groupBox3.Controls.Add(this.txtBathT43);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.txtBathT33);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBox15);
+            this.groupBox3.Controls.Add(this.txtBathT23);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.textBox16);
+            this.groupBox3.Controls.Add(this.txtBathT13);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.chkPist42);
             this.groupBox3.Controls.Add(this.chk22Air);
             this.groupBox3.Controls.Add(this.chkPist32);
             this.groupBox3.Controls.Add(this.chkPist22);
             this.groupBox3.Controls.Add(this.chkPist12);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.txtBathT42);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.txtBathT32);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.txtBathT22);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.txtBathT12);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.chkPist41);
             this.groupBox3.Controls.Add(this.chk21Air);
@@ -695,13 +695,13 @@
             this.groupBox3.Controls.Add(this.chkPist21);
             this.groupBox3.Controls.Add(this.btnSetMulti);
             this.groupBox3.Controls.Add(this.chkPist11);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtBathT41);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.txtBathT31);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txtBathT21);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txtBathT11);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(17, 335);
@@ -711,6 +711,449 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Multi Basket";
             // 
+            // btnProg23
+            // 
+            this.btnProg23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProg23.Location = new System.Drawing.Point(500, 415);
+            this.btnProg23.Name = "btnProg23";
+            this.btnProg23.Size = new System.Drawing.Size(113, 41);
+            this.btnProg23.TabIndex = 24;
+            this.btnProg23.Text = "Program3";
+            this.btnProg23.UseVisualStyleBackColor = true;
+            this.btnProg23.Click += new System.EventHandler(this.btnProg23_Click);
+            // 
+            // chkPist44
+            // 
+            this.chkPist44.AutoSize = true;
+            this.chkPist44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist44.Location = new System.Drawing.Point(1221, 283);
+            this.chkPist44.Name = "chkPist44";
+            this.chkPist44.Size = new System.Drawing.Size(18, 17);
+            this.chkPist44.TabIndex = 64;
+            this.chkPist44.UseVisualStyleBackColor = true;
+            // 
+            // btnProg22
+            // 
+            this.btnProg22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProg22.Location = new System.Drawing.Point(377, 415);
+            this.btnProg22.Name = "btnProg22";
+            this.btnProg22.Size = new System.Drawing.Size(113, 41);
+            this.btnProg22.TabIndex = 23;
+            this.btnProg22.Text = "Program2";
+            this.btnProg22.UseVisualStyleBackColor = true;
+            this.btnProg22.Click += new System.EventHandler(this.btnProg22_Click);
+            // 
+            // btnProg21
+            // 
+            this.btnProg21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProg21.Location = new System.Drawing.Point(254, 415);
+            this.btnProg21.Name = "btnProg21";
+            this.btnProg21.Size = new System.Drawing.Size(113, 41);
+            this.btnProg21.TabIndex = 22;
+            this.btnProg21.Text = "Program1";
+            this.btnProg21.UseVisualStyleBackColor = true;
+            this.btnProg21.Click += new System.EventHandler(this.btnProg21_Click);
+            // 
+            // chk24Air
+            // 
+            this.chk24Air.AutoSize = true;
+            this.chk24Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk24Air.Location = new System.Drawing.Point(1294, 279);
+            this.chk24Air.Name = "chk24Air";
+            this.chk24Air.Size = new System.Drawing.Size(66, 29);
+            this.chk24Air.TabIndex = 60;
+            this.chk24Air.Text = "AIR";
+            this.chk24Air.UseVisualStyleBackColor = true;
+            // 
+            // chkPist34
+            // 
+            this.chkPist34.AutoSize = true;
+            this.chkPist34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist34.Location = new System.Drawing.Point(883, 285);
+            this.chkPist34.Name = "chkPist34";
+            this.chkPist34.Size = new System.Drawing.Size(18, 17);
+            this.chkPist34.TabIndex = 63;
+            this.chkPist34.UseVisualStyleBackColor = true;
+            // 
+            // chkPist24
+            // 
+            this.chkPist24.AutoSize = true;
+            this.chkPist24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist24.Location = new System.Drawing.Point(572, 285);
+            this.chkPist24.Name = "chkPist24";
+            this.chkPist24.Size = new System.Drawing.Size(18, 17);
+            this.chkPist24.TabIndex = 62;
+            this.chkPist24.UseVisualStyleBackColor = true;
+            // 
+            // chkPist14
+            // 
+            this.chkPist14.AutoSize = true;
+            this.chkPist14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist14.Location = new System.Drawing.Point(264, 283);
+            this.chkPist14.Name = "chkPist14";
+            this.chkPist14.Size = new System.Drawing.Size(18, 17);
+            this.chkPist14.TabIndex = 61;
+            this.chkPist14.UseVisualStyleBackColor = true;
+            // 
+            // txtBathT44
+            // 
+            this.txtBathT44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT44.Location = new System.Drawing.Point(1142, 276);
+            this.txtBathT44.Name = "txtBathT44";
+            this.txtBathT44.Size = new System.Drawing.Size(71, 30);
+            this.txtBathT44.TabIndex = 59;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(967, 279);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(177, 25);
+            this.label16.TabIndex = 58;
+            this.label16.Text = "Bath4 Time4: [min]";
+            // 
+            // txtBathT34
+            // 
+            this.txtBathT34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT34.Location = new System.Drawing.Point(820, 276);
+            this.txtBathT34.Name = "txtBathT34";
+            this.txtBathT34.Size = new System.Drawing.Size(57, 30);
+            this.txtBathT34.TabIndex = 57;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(645, 279);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(177, 25);
+            this.label17.TabIndex = 56;
+            this.label17.Text = "Bath3 Time4: [min]";
+            // 
+            // txtBathT24
+            // 
+            this.txtBathT24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT24.Location = new System.Drawing.Point(505, 276);
+            this.txtBathT24.Name = "txtBathT24";
+            this.txtBathT24.Size = new System.Drawing.Size(61, 30);
+            this.txtBathT24.TabIndex = 55;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(330, 279);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(177, 25);
+            this.label18.TabIndex = 54;
+            this.label18.Text = "Bath2 Time4: [min]";
+            // 
+            // txtBathT14
+            // 
+            this.txtBathT14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT14.Location = new System.Drawing.Point(195, 276);
+            this.txtBathT14.Name = "txtBathT14";
+            this.txtBathT14.Size = new System.Drawing.Size(59, 30);
+            this.txtBathT14.TabIndex = 53;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(20, 279);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(177, 25);
+            this.label19.TabIndex = 52;
+            this.label19.Text = "Bath1 Time4: [min]";
+            // 
+            // chkPist43
+            // 
+            this.chkPist43.AutoSize = true;
+            this.chkPist43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist43.Location = new System.Drawing.Point(1221, 216);
+            this.chkPist43.Name = "chkPist43";
+            this.chkPist43.Size = new System.Drawing.Size(18, 17);
+            this.chkPist43.TabIndex = 51;
+            this.chkPist43.UseVisualStyleBackColor = true;
+            // 
+            // chk23Air
+            // 
+            this.chk23Air.AutoSize = true;
+            this.chk23Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk23Air.Location = new System.Drawing.Point(1294, 212);
+            this.chk23Air.Name = "chk23Air";
+            this.chk23Air.Size = new System.Drawing.Size(66, 29);
+            this.chk23Air.TabIndex = 48;
+            this.chk23Air.Text = "AIR";
+            this.chk23Air.UseVisualStyleBackColor = true;
+            // 
+            // chkPist33
+            // 
+            this.chkPist33.AutoSize = true;
+            this.chkPist33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist33.Location = new System.Drawing.Point(883, 218);
+            this.chkPist33.Name = "chkPist33";
+            this.chkPist33.Size = new System.Drawing.Size(18, 17);
+            this.chkPist33.TabIndex = 50;
+            this.chkPist33.UseVisualStyleBackColor = true;
+            // 
+            // chkPist23
+            // 
+            this.chkPist23.AutoSize = true;
+            this.chkPist23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist23.Location = new System.Drawing.Point(572, 218);
+            this.chkPist23.Name = "chkPist23";
+            this.chkPist23.Size = new System.Drawing.Size(18, 17);
+            this.chkPist23.TabIndex = 49;
+            this.chkPist23.UseVisualStyleBackColor = true;
+            // 
+            // chkPist13
+            // 
+            this.chkPist13.AutoSize = true;
+            this.chkPist13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist13.Location = new System.Drawing.Point(264, 216);
+            this.chkPist13.Name = "chkPist13";
+            this.chkPist13.Size = new System.Drawing.Size(18, 17);
+            this.chkPist13.TabIndex = 47;
+            this.chkPist13.UseVisualStyleBackColor = true;
+            // 
+            // txtBathT43
+            // 
+            this.txtBathT43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT43.Location = new System.Drawing.Point(1142, 209);
+            this.txtBathT43.Name = "txtBathT43";
+            this.txtBathT43.Size = new System.Drawing.Size(71, 30);
+            this.txtBathT43.TabIndex = 46;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(967, 212);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(177, 25);
+            this.label20.TabIndex = 45;
+            this.label20.Text = "Bath4 Time3: [min]";
+            // 
+            // txtBathT33
+            // 
+            this.txtBathT33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT33.Location = new System.Drawing.Point(820, 209);
+            this.txtBathT33.Name = "txtBathT33";
+            this.txtBathT33.Size = new System.Drawing.Size(57, 30);
+            this.txtBathT33.TabIndex = 44;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(645, 212);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(177, 25);
+            this.label21.TabIndex = 43;
+            this.label21.Text = "Bath3 Time3: [min]";
+            // 
+            // txtBathT23
+            // 
+            this.txtBathT23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT23.Location = new System.Drawing.Point(505, 209);
+            this.txtBathT23.Name = "txtBathT23";
+            this.txtBathT23.Size = new System.Drawing.Size(61, 30);
+            this.txtBathT23.TabIndex = 42;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(330, 212);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(177, 25);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "Bath2 Time3: [min]";
+            // 
+            // txtBathT13
+            // 
+            this.txtBathT13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT13.Location = new System.Drawing.Point(195, 209);
+            this.txtBathT13.Name = "txtBathT13";
+            this.txtBathT13.Size = new System.Drawing.Size(59, 30);
+            this.txtBathT13.TabIndex = 40;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(20, 212);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(177, 25);
+            this.label23.TabIndex = 39;
+            this.label23.Text = "Bath1 Time3: [min]";
+            // 
+            // chkPist42
+            // 
+            this.chkPist42.AutoSize = true;
+            this.chkPist42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist42.Location = new System.Drawing.Point(1221, 153);
+            this.chkPist42.Name = "chkPist42";
+            this.chkPist42.Size = new System.Drawing.Size(18, 17);
+            this.chkPist42.TabIndex = 38;
+            this.chkPist42.UseVisualStyleBackColor = true;
+            // 
+            // chk22Air
+            // 
+            this.chk22Air.AutoSize = true;
+            this.chk22Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk22Air.Location = new System.Drawing.Point(1294, 149);
+            this.chk22Air.Name = "chk22Air";
+            this.chk22Air.Size = new System.Drawing.Size(66, 29);
+            this.chk22Air.TabIndex = 34;
+            this.chk22Air.Text = "AIR";
+            this.chk22Air.UseVisualStyleBackColor = true;
+            // 
+            // chkPist32
+            // 
+            this.chkPist32.AutoSize = true;
+            this.chkPist32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist32.Location = new System.Drawing.Point(883, 155);
+            this.chkPist32.Name = "chkPist32";
+            this.chkPist32.Size = new System.Drawing.Size(18, 17);
+            this.chkPist32.TabIndex = 37;
+            this.chkPist32.UseVisualStyleBackColor = true;
+            // 
+            // chkPist22
+            // 
+            this.chkPist22.AutoSize = true;
+            this.chkPist22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist22.Location = new System.Drawing.Point(572, 155);
+            this.chkPist22.Name = "chkPist22";
+            this.chkPist22.Size = new System.Drawing.Size(18, 17);
+            this.chkPist22.TabIndex = 36;
+            this.chkPist22.UseVisualStyleBackColor = true;
+            // 
+            // chkPist12
+            // 
+            this.chkPist12.AutoSize = true;
+            this.chkPist12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist12.Location = new System.Drawing.Point(264, 153);
+            this.chkPist12.Name = "chkPist12";
+            this.chkPist12.Size = new System.Drawing.Size(18, 17);
+            this.chkPist12.TabIndex = 35;
+            this.chkPist12.UseVisualStyleBackColor = true;
+            // 
+            // txtBathT42
+            // 
+            this.txtBathT42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT42.Location = new System.Drawing.Point(1142, 146);
+            this.txtBathT42.Name = "txtBathT42";
+            this.txtBathT42.Size = new System.Drawing.Size(71, 30);
+            this.txtBathT42.TabIndex = 33;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(967, 149);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(177, 25);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Bath4 Time2: [min]";
+            // 
+            // txtBathT32
+            // 
+            this.txtBathT32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT32.Location = new System.Drawing.Point(820, 146);
+            this.txtBathT32.Name = "txtBathT32";
+            this.txtBathT32.Size = new System.Drawing.Size(57, 30);
+            this.txtBathT32.TabIndex = 31;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(645, 149);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(177, 25);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Bath3 Time2: [min]";
+            // 
+            // txtBathT22
+            // 
+            this.txtBathT22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT22.Location = new System.Drawing.Point(505, 146);
+            this.txtBathT22.Name = "txtBathT22";
+            this.txtBathT22.Size = new System.Drawing.Size(61, 30);
+            this.txtBathT22.TabIndex = 29;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(330, 149);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(177, 25);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "Bath2 Time2: [min]";
+            // 
+            // txtBathT12
+            // 
+            this.txtBathT12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT12.Location = new System.Drawing.Point(195, 146);
+            this.txtBathT12.Name = "txtBathT12";
+            this.txtBathT12.Size = new System.Drawing.Size(59, 30);
+            this.txtBathT12.TabIndex = 27;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(20, 149);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(177, 25);
+            this.label15.TabIndex = 26;
+            this.label15.Text = "Bath1 Time2: [min]";
+            // 
+            // chkPist41
+            // 
+            this.chkPist41.AutoSize = true;
+            this.chkPist41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist41.Location = new System.Drawing.Point(1221, 86);
+            this.chkPist41.Name = "chkPist41";
+            this.chkPist41.Size = new System.Drawing.Size(18, 17);
+            this.chkPist41.TabIndex = 25;
+            this.chkPist41.UseVisualStyleBackColor = true;
+            // 
+            // chk21Air
+            // 
+            this.chk21Air.AutoSize = true;
+            this.chk21Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk21Air.Location = new System.Drawing.Point(1294, 82);
+            this.chk21Air.Name = "chk21Air";
+            this.chk21Air.Size = new System.Drawing.Size(66, 29);
+            this.chk21Air.TabIndex = 22;
+            this.chk21Air.Text = "AIR";
+            this.chk21Air.UseVisualStyleBackColor = true;
+            // 
+            // chkPist31
+            // 
+            this.chkPist31.AutoSize = true;
+            this.chkPist31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist31.Location = new System.Drawing.Point(883, 88);
+            this.chkPist31.Name = "chkPist31";
+            this.chkPist31.Size = new System.Drawing.Size(18, 17);
+            this.chkPist31.TabIndex = 24;
+            this.chkPist31.UseVisualStyleBackColor = true;
+            // 
+            // chkPist21
+            // 
+            this.chkPist21.AutoSize = true;
+            this.chkPist21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist21.Location = new System.Drawing.Point(572, 88);
+            this.chkPist21.Name = "chkPist21";
+            this.chkPist21.Size = new System.Drawing.Size(18, 17);
+            this.chkPist21.TabIndex = 23;
+            this.chkPist21.UseVisualStyleBackColor = true;
+            // 
             // btnSetMulti
             // 
             this.btnSetMulti.Location = new System.Drawing.Point(25, 415);
@@ -719,14 +1162,25 @@
             this.btnSetMulti.TabIndex = 14;
             this.btnSetMulti.Text = "SET";
             this.btnSetMulti.UseVisualStyleBackColor = true;
+            this.btnSetMulti.Click += new System.EventHandler(this.btnSetMulti_Click);
             // 
-            // textBox1
+            // chkPist11
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1142, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(71, 30);
-            this.textBox1.TabIndex = 10;
+            this.chkPist11.AutoSize = true;
+            this.chkPist11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPist11.Location = new System.Drawing.Point(264, 86);
+            this.chkPist11.Name = "chkPist11";
+            this.chkPist11.Size = new System.Drawing.Size(18, 17);
+            this.chkPist11.TabIndex = 22;
+            this.chkPist11.UseVisualStyleBackColor = true;
+            // 
+            // txtBathT41
+            // 
+            this.txtBathT41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT41.Location = new System.Drawing.Point(1142, 79);
+            this.txtBathT41.Name = "txtBathT41";
+            this.txtBathT41.Size = new System.Drawing.Size(71, 30);
+            this.txtBathT41.TabIndex = 10;
             // 
             // label7
             // 
@@ -734,17 +1188,17 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(967, 82);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(221, 31);
+            this.label7.Size = new System.Drawing.Size(177, 25);
             this.label7.TabIndex = 9;
             this.label7.Text = "Bath4 Time1: [min]";
             // 
-            // textBox2
+            // txtBathT31
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(820, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(57, 30);
-            this.textBox2.TabIndex = 7;
+            this.txtBathT31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT31.Location = new System.Drawing.Point(820, 79);
+            this.txtBathT31.Name = "txtBathT31";
+            this.txtBathT31.Size = new System.Drawing.Size(57, 30);
+            this.txtBathT31.TabIndex = 7;
             // 
             // label8
             // 
@@ -752,17 +1206,17 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(645, 82);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(221, 31);
+            this.label8.Size = new System.Drawing.Size(177, 25);
             this.label8.TabIndex = 6;
             this.label8.Text = "Bath3 Time1: [min]";
             // 
-            // textBox3
+            // txtBathT21
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(505, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(61, 30);
-            this.textBox3.TabIndex = 4;
+            this.txtBathT21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT21.Location = new System.Drawing.Point(505, 79);
+            this.txtBathT21.Name = "txtBathT21";
+            this.txtBathT21.Size = new System.Drawing.Size(61, 30);
+            this.txtBathT21.TabIndex = 4;
             // 
             // label9
             // 
@@ -770,17 +1224,17 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(330, 82);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(221, 31);
+            this.label9.Size = new System.Drawing.Size(177, 25);
             this.label9.TabIndex = 3;
             this.label9.Text = "Bath2 Time1: [min]";
             // 
-            // textBox4
+            // txtBathT11
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(195, 79);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(59, 30);
-            this.textBox4.TabIndex = 1;
+            this.txtBathT11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBathT11.Location = new System.Drawing.Point(195, 79);
+            this.txtBathT11.Name = "txtBathT11";
+            this.txtBathT11.Size = new System.Drawing.Size(59, 30);
+            this.txtBathT11.TabIndex = 1;
             // 
             // label10
             // 
@@ -788,7 +1242,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(20, 82);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(221, 31);
+            this.label10.Size = new System.Drawing.Size(177, 25);
             this.label10.TabIndex = 0;
             this.label10.Text = "Bath1 Time1: [min]";
             // 
@@ -819,6 +1273,17 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Single Basket";
+            // 
+            // chk1Air
+            // 
+            this.chk1Air.AutoSize = true;
+            this.chk1Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk1Air.Location = new System.Drawing.Point(1294, 82);
+            this.chk1Air.Name = "chk1Air";
+            this.chk1Air.Size = new System.Drawing.Size(66, 29);
+            this.chk1Air.TabIndex = 21;
+            this.chk1Air.Text = "AIR";
+            this.chk1Air.UseVisualStyleBackColor = true;
             // 
             // chkPist4
             // 
@@ -1095,467 +1560,6 @@
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
-            // chk1Air
-            // 
-            this.chk1Air.AutoSize = true;
-            this.chk1Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk1Air.Location = new System.Drawing.Point(1294, 82);
-            this.chk1Air.Name = "chk1Air";
-            this.chk1Air.Size = new System.Drawing.Size(66, 29);
-            this.chk1Air.TabIndex = 21;
-            this.chk1Air.Text = "AIR";
-            this.chk1Air.UseVisualStyleBackColor = true;
-            // 
-            // chk21Air
-            // 
-            this.chk21Air.AutoSize = true;
-            this.chk21Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk21Air.Location = new System.Drawing.Point(1294, 82);
-            this.chk21Air.Name = "chk21Air";
-            this.chk21Air.Size = new System.Drawing.Size(66, 29);
-            this.chk21Air.TabIndex = 22;
-            this.chk21Air.Text = "AIR";
-            this.chk21Air.UseVisualStyleBackColor = true;
-            // 
-            // chkPist41
-            // 
-            this.chkPist41.AutoSize = true;
-            this.chkPist41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist41.Location = new System.Drawing.Point(1221, 86);
-            this.chkPist41.Name = "chkPist41";
-            this.chkPist41.Size = new System.Drawing.Size(18, 17);
-            this.chkPist41.TabIndex = 25;
-            this.chkPist41.UseVisualStyleBackColor = true;
-            // 
-            // chkPist31
-            // 
-            this.chkPist31.AutoSize = true;
-            this.chkPist31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist31.Location = new System.Drawing.Point(883, 88);
-            this.chkPist31.Name = "chkPist31";
-            this.chkPist31.Size = new System.Drawing.Size(18, 17);
-            this.chkPist31.TabIndex = 24;
-            this.chkPist31.UseVisualStyleBackColor = true;
-            // 
-            // chkPist21
-            // 
-            this.chkPist21.AutoSize = true;
-            this.chkPist21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist21.Location = new System.Drawing.Point(572, 88);
-            this.chkPist21.Name = "chkPist21";
-            this.chkPist21.Size = new System.Drawing.Size(18, 17);
-            this.chkPist21.TabIndex = 23;
-            this.chkPist21.UseVisualStyleBackColor = true;
-            // 
-            // chkPist11
-            // 
-            this.chkPist11.AutoSize = true;
-            this.chkPist11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist11.Location = new System.Drawing.Point(264, 86);
-            this.chkPist11.Name = "chkPist11";
-            this.chkPist11.Size = new System.Drawing.Size(18, 17);
-            this.chkPist11.TabIndex = 22;
-            this.chkPist11.UseVisualStyleBackColor = true;
-            // 
-            // chkPist42
-            // 
-            this.chkPist42.AutoSize = true;
-            this.chkPist42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist42.Location = new System.Drawing.Point(1221, 153);
-            this.chkPist42.Name = "chkPist42";
-            this.chkPist42.Size = new System.Drawing.Size(18, 17);
-            this.chkPist42.TabIndex = 38;
-            this.chkPist42.UseVisualStyleBackColor = true;
-            // 
-            // chk22Air
-            // 
-            this.chk22Air.AutoSize = true;
-            this.chk22Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk22Air.Location = new System.Drawing.Point(1294, 149);
-            this.chk22Air.Name = "chk22Air";
-            this.chk22Air.Size = new System.Drawing.Size(66, 29);
-            this.chk22Air.TabIndex = 34;
-            this.chk22Air.Text = "AIR";
-            this.chk22Air.UseVisualStyleBackColor = true;
-            // 
-            // chkPist32
-            // 
-            this.chkPist32.AutoSize = true;
-            this.chkPist32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist32.Location = new System.Drawing.Point(883, 155);
-            this.chkPist32.Name = "chkPist32";
-            this.chkPist32.Size = new System.Drawing.Size(18, 17);
-            this.chkPist32.TabIndex = 37;
-            this.chkPist32.UseVisualStyleBackColor = true;
-            // 
-            // chkPist22
-            // 
-            this.chkPist22.AutoSize = true;
-            this.chkPist22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist22.Location = new System.Drawing.Point(572, 155);
-            this.chkPist22.Name = "chkPist22";
-            this.chkPist22.Size = new System.Drawing.Size(18, 17);
-            this.chkPist22.TabIndex = 36;
-            this.chkPist22.UseVisualStyleBackColor = true;
-            // 
-            // chkPist12
-            // 
-            this.chkPist12.AutoSize = true;
-            this.chkPist12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist12.Location = new System.Drawing.Point(264, 153);
-            this.chkPist12.Name = "chkPist12";
-            this.chkPist12.Size = new System.Drawing.Size(18, 17);
-            this.chkPist12.TabIndex = 35;
-            this.chkPist12.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(1142, 146);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(71, 30);
-            this.textBox5.TabIndex = 33;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(967, 149);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(221, 31);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Bath4 Time2: [min]";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(820, 146);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(57, 30);
-            this.textBox6.TabIndex = 31;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(645, 149);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(221, 31);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "Bath3 Time2: [min]";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(505, 146);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(61, 30);
-            this.textBox7.TabIndex = 29;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(330, 149);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(221, 31);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "Bath2 Time2: [min]";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(195, 146);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(59, 30);
-            this.textBox8.TabIndex = 27;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(20, 149);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(221, 31);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Bath1 Time2: [min]";
-            // 
-            // chkPist44
-            // 
-            this.chkPist44.AutoSize = true;
-            this.chkPist44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist44.Location = new System.Drawing.Point(1221, 283);
-            this.chkPist44.Name = "chkPist44";
-            this.chkPist44.Size = new System.Drawing.Size(18, 17);
-            this.chkPist44.TabIndex = 64;
-            this.chkPist44.UseVisualStyleBackColor = true;
-            // 
-            // chk24Air
-            // 
-            this.chk24Air.AutoSize = true;
-            this.chk24Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk24Air.Location = new System.Drawing.Point(1294, 279);
-            this.chk24Air.Name = "chk24Air";
-            this.chk24Air.Size = new System.Drawing.Size(66, 29);
-            this.chk24Air.TabIndex = 60;
-            this.chk24Air.Text = "AIR";
-            this.chk24Air.UseVisualStyleBackColor = true;
-            // 
-            // chkPist34
-            // 
-            this.chkPist34.AutoSize = true;
-            this.chkPist34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist34.Location = new System.Drawing.Point(883, 285);
-            this.chkPist34.Name = "chkPist34";
-            this.chkPist34.Size = new System.Drawing.Size(18, 17);
-            this.chkPist34.TabIndex = 63;
-            this.chkPist34.UseVisualStyleBackColor = true;
-            // 
-            // chkPist24
-            // 
-            this.chkPist24.AutoSize = true;
-            this.chkPist24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist24.Location = new System.Drawing.Point(572, 285);
-            this.chkPist24.Name = "chkPist24";
-            this.chkPist24.Size = new System.Drawing.Size(18, 17);
-            this.chkPist24.TabIndex = 62;
-            this.chkPist24.UseVisualStyleBackColor = true;
-            // 
-            // chkPist14
-            // 
-            this.chkPist14.AutoSize = true;
-            this.chkPist14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist14.Location = new System.Drawing.Point(264, 283);
-            this.chkPist14.Name = "chkPist14";
-            this.chkPist14.Size = new System.Drawing.Size(18, 17);
-            this.chkPist14.TabIndex = 61;
-            this.chkPist14.UseVisualStyleBackColor = true;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(1142, 276);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(71, 30);
-            this.textBox9.TabIndex = 59;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(967, 279);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(221, 31);
-            this.label16.TabIndex = 58;
-            this.label16.Text = "Bath4 Time4: [min]";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(820, 276);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(57, 30);
-            this.textBox10.TabIndex = 57;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(645, 279);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(221, 31);
-            this.label17.TabIndex = 56;
-            this.label17.Text = "Bath3 Time4: [min]";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(505, 276);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(61, 30);
-            this.textBox11.TabIndex = 55;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(330, 279);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(221, 31);
-            this.label18.TabIndex = 54;
-            this.label18.Text = "Bath2 Time4: [min]";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(195, 276);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(59, 30);
-            this.textBox12.TabIndex = 53;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(20, 279);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(221, 31);
-            this.label19.TabIndex = 52;
-            this.label19.Text = "Bath1 Time4: [min]";
-            // 
-            // chkPist43
-            // 
-            this.chkPist43.AutoSize = true;
-            this.chkPist43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist43.Location = new System.Drawing.Point(1221, 216);
-            this.chkPist43.Name = "chkPist43";
-            this.chkPist43.Size = new System.Drawing.Size(18, 17);
-            this.chkPist43.TabIndex = 51;
-            this.chkPist43.UseVisualStyleBackColor = true;
-            // 
-            // chk23Air
-            // 
-            this.chk23Air.AutoSize = true;
-            this.chk23Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk23Air.Location = new System.Drawing.Point(1294, 212);
-            this.chk23Air.Name = "chk23Air";
-            this.chk23Air.Size = new System.Drawing.Size(66, 29);
-            this.chk23Air.TabIndex = 48;
-            this.chk23Air.Text = "AIR";
-            this.chk23Air.UseVisualStyleBackColor = true;
-            // 
-            // chkPist33
-            // 
-            this.chkPist33.AutoSize = true;
-            this.chkPist33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist33.Location = new System.Drawing.Point(883, 218);
-            this.chkPist33.Name = "chkPist33";
-            this.chkPist33.Size = new System.Drawing.Size(18, 17);
-            this.chkPist33.TabIndex = 50;
-            this.chkPist33.UseVisualStyleBackColor = true;
-            // 
-            // chkPist23
-            // 
-            this.chkPist23.AutoSize = true;
-            this.chkPist23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist23.Location = new System.Drawing.Point(572, 218);
-            this.chkPist23.Name = "chkPist23";
-            this.chkPist23.Size = new System.Drawing.Size(18, 17);
-            this.chkPist23.TabIndex = 49;
-            this.chkPist23.UseVisualStyleBackColor = true;
-            // 
-            // chkPist13
-            // 
-            this.chkPist13.AutoSize = true;
-            this.chkPist13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPist13.Location = new System.Drawing.Point(264, 216);
-            this.chkPist13.Name = "chkPist13";
-            this.chkPist13.Size = new System.Drawing.Size(18, 17);
-            this.chkPist13.TabIndex = 47;
-            this.chkPist13.UseVisualStyleBackColor = true;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(1142, 209);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(71, 30);
-            this.textBox13.TabIndex = 46;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(967, 212);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(221, 31);
-            this.label20.TabIndex = 45;
-            this.label20.Text = "Bath4 Time3: [min]";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(820, 209);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(57, 30);
-            this.textBox14.TabIndex = 44;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(645, 212);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(221, 31);
-            this.label21.TabIndex = 43;
-            this.label21.Text = "Bath3 Time3: [min]";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(505, 209);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(61, 30);
-            this.textBox15.TabIndex = 42;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(330, 212);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(221, 31);
-            this.label22.TabIndex = 41;
-            this.label22.Text = "Bath2 Time3: [min]";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(195, 209);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(59, 30);
-            this.textBox16.TabIndex = 40;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(20, 212);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(221, 31);
-            this.label23.TabIndex = 39;
-            this.label23.Text = "Bath1 Time3: [min]";
-            // 
-            // btnProg23
-            // 
-            this.btnProg23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProg23.Location = new System.Drawing.Point(500, 415);
-            this.btnProg23.Name = "btnProg23";
-            this.btnProg23.Size = new System.Drawing.Size(113, 41);
-            this.btnProg23.TabIndex = 24;
-            this.btnProg23.Text = "Program3";
-            this.btnProg23.UseVisualStyleBackColor = true;
-            // 
-            // btnProg22
-            // 
-            this.btnProg22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProg22.Location = new System.Drawing.Point(377, 415);
-            this.btnProg22.Name = "btnProg22";
-            this.btnProg22.Size = new System.Drawing.Size(113, 41);
-            this.btnProg22.TabIndex = 23;
-            this.btnProg22.Text = "Program2";
-            this.btnProg22.UseVisualStyleBackColor = true;
-            // 
-            // btnProg21
-            // 
-            this.btnProg21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProg21.Location = new System.Drawing.Point(254, 415);
-            this.btnProg21.Name = "btnProg21";
-            this.btnProg21.Size = new System.Drawing.Size(113, 41);
-            this.btnProg21.TabIndex = 22;
-            this.btnProg21.Text = "Program1";
-            this.btnProg21.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1653,13 +1657,13 @@
         private System.Windows.Forms.TextBox txtBathT3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBathT41;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBathT31;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBathT21;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBathT11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblScreenX;
         private System.Windows.Forms.Label label11;
@@ -1689,39 +1693,39 @@
         private System.Windows.Forms.CheckBox chkPist34;
         private System.Windows.Forms.CheckBox chkPist24;
         private System.Windows.Forms.CheckBox chkPist14;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtBathT44;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtBathT34;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtBathT24;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtBathT14;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.CheckBox chkPist43;
         private System.Windows.Forms.CheckBox chk23Air;
         private System.Windows.Forms.CheckBox chkPist33;
         private System.Windows.Forms.CheckBox chkPist23;
         private System.Windows.Forms.CheckBox chkPist13;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtBathT43;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtBathT33;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtBathT23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtBathT13;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.CheckBox chkPist42;
         private System.Windows.Forms.CheckBox chk22Air;
         private System.Windows.Forms.CheckBox chkPist32;
         private System.Windows.Forms.CheckBox chkPist22;
         private System.Windows.Forms.CheckBox chkPist12;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBathT42;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBathT32;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBathT22;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtBathT12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnProg23;
         private System.Windows.Forms.Button btnProg22;
