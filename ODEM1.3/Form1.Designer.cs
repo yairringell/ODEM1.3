@@ -161,6 +161,7 @@
             this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
+            this.btnStart_multi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -199,7 +200,7 @@
             this.txtIP.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIP.Size = new System.Drawing.Size(118, 24);
             this.txtIP.TabIndex = 0;
-            this.txtIP.Text = "192.168.14.176";
+            this.txtIP.Text = "127.0.0.1";
             // 
             // grpMain
             // 
@@ -232,7 +233,7 @@
             this.grpMain.Controls.Add(this.grpJog);
             this.grpMain.Controls.Add(this.btnZaxis);
             this.grpMain.Controls.Add(this.btnXaxis);
-            this.grpMain.Location = new System.Drawing.Point(1, 90);
+            this.grpMain.Location = new System.Drawing.Point(1, 95);
             this.grpMain.Name = "grpMain";
             this.grpMain.Size = new System.Drawing.Size(1526, 807);
             this.grpMain.TabIndex = 1;
@@ -293,6 +294,7 @@
             // grpActions
             // 
             this.grpActions.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpActions.Controls.Add(this.btnStart_multi);
             this.grpActions.Controls.Add(this.btnNext);
             this.grpActions.Controls.Add(this.btnPrev);
             this.grpActions.Controls.Add(this.btnRelease);
@@ -307,7 +309,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(12, 175);
+            this.btnNext.Location = new System.Drawing.Point(12, 269);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(141, 64);
             this.btnNext.TabIndex = 30;
@@ -317,7 +319,7 @@
             // 
             // btnPrev
             // 
-            this.btnPrev.Location = new System.Drawing.Point(12, 252);
+            this.btnPrev.Location = new System.Drawing.Point(12, 346);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(141, 64);
             this.btnPrev.TabIndex = 31;
@@ -327,7 +329,7 @@
             // 
             // btnRelease
             // 
-            this.btnRelease.Location = new System.Drawing.Point(12, 329);
+            this.btnRelease.Location = new System.Drawing.Point(12, 423);
             this.btnRelease.Name = "btnRelease";
             this.btnRelease.Size = new System.Drawing.Size(141, 64);
             this.btnRelease.TabIndex = 28;
@@ -337,7 +339,7 @@
             // 
             // btnGrab
             // 
-            this.btnGrab.Location = new System.Drawing.Point(12, 406);
+            this.btnGrab.Location = new System.Drawing.Point(12, 500);
             this.btnGrab.Name = "btnGrab";
             this.btnGrab.Size = new System.Drawing.Size(141, 64);
             this.btnGrab.TabIndex = 29;
@@ -351,13 +353,13 @@
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(141, 64);
             this.btnStart.TabIndex = 26;
-            this.btnStart.Text = "START";
+            this.btnStart.Text = "Run Single";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(12, 98);
+            this.btnStop.Location = new System.Drawing.Point(12, 192);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(141, 64);
             this.btnStop.TabIndex = 27;
@@ -1560,6 +1562,16 @@
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
+            // btnStart_multi
+            // 
+            this.btnStart_multi.Location = new System.Drawing.Point(12, 101);
+            this.btnStart_multi.Name = "btnStart_multi";
+            this.btnStart_multi.Size = new System.Drawing.Size(141, 64);
+            this.btnStart_multi.TabIndex = 32;
+            this.btnStart_multi.Text = "Run Multi";
+            this.btnStart_multi.UseVisualStyleBackColor = true;
+            this.btnStart_multi.Click += new System.EventHandler(this.btnStart_multi_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1730,6 +1742,7 @@
         private System.Windows.Forms.Button btnProg23;
         private System.Windows.Forms.Button btnProg22;
         private System.Windows.Forms.Button btnProg21;
+        private System.Windows.Forms.Button btnStart_multi;
     }
 }
 

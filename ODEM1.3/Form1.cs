@@ -150,6 +150,11 @@ namespace ODEM1._3
             read_multi_prog();
         }
 
+        private void btnStart_multi_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(1, "RUN_MULTI");
+        }
+
         private void btnGrab_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(1, "GRAB_CMD");
@@ -168,7 +173,7 @@ namespace ODEM1._3
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            _ACS.WriteVariable(1, "RUN_PROG");
+            _ACS.WriteVariable(1, "RUN_SINGLE");
         }
 
         private void btnSetMulti_Click(object sender, EventArgs e)
