@@ -199,7 +199,7 @@
             this.txtIP.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIP.Size = new System.Drawing.Size(118, 24);
             this.txtIP.TabIndex = 0;
-            this.txtIP.Text = "192.168.120.22";
+            this.txtIP.Text = "192.168.14.176";
             // 
             // grpMain
             // 

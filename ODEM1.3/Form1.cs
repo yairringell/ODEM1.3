@@ -255,6 +255,7 @@ namespace ODEM1._3
                     btnConnect.BackColor = Color.LightGreen;
                     btnHome.Enabled = true;
                     read_single_prog();
+                    read_multi_prog();
 
 
                 }
