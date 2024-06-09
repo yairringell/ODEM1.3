@@ -39,6 +39,7 @@
             this.lblT1 = new System.Windows.Forms.Label();
             this.btnZbasket = new System.Windows.Forms.Button();
             this.grpActions = new System.Windows.Forms.GroupBox();
+            this.btnStart_multi = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnRelease = new System.Windows.Forms.Button();
@@ -161,7 +162,6 @@
             this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
-            this.btnStart_multi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -200,7 +200,7 @@
             this.txtIP.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIP.Size = new System.Drawing.Size(118, 24);
             this.txtIP.TabIndex = 0;
-            this.txtIP.Text = "127.0.0.1";
+            this.txtIP.Text = "192.168.120.22";
             // 
             // grpMain
             // 
@@ -306,6 +306,16 @@
             this.grpActions.Size = new System.Drawing.Size(172, 639);
             this.grpActions.TabIndex = 28;
             this.grpActions.TabStop = false;
+            // 
+            // btnStart_multi
+            // 
+            this.btnStart_multi.Location = new System.Drawing.Point(12, 101);
+            this.btnStart_multi.Name = "btnStart_multi";
+            this.btnStart_multi.Size = new System.Drawing.Size(141, 64);
+            this.btnStart_multi.TabIndex = 32;
+            this.btnStart_multi.Text = "Run Multi";
+            this.btnStart_multi.UseVisualStyleBackColor = true;
+            this.btnStart_multi.Click += new System.EventHandler(this.btnStart_multi_Click);
             // 
             // btnNext
             // 
@@ -1562,16 +1572,6 @@
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
-            // btnStart_multi
-            // 
-            this.btnStart_multi.Location = new System.Drawing.Point(12, 101);
-            this.btnStart_multi.Name = "btnStart_multi";
-            this.btnStart_multi.Size = new System.Drawing.Size(141, 64);
-            this.btnStart_multi.TabIndex = 32;
-            this.btnStart_multi.Text = "Run Multi";
-            this.btnStart_multi.UseVisualStyleBackColor = true;
-            this.btnStart_multi.Click += new System.EventHandler(this.btnStart_multi_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1585,8 +1585,8 @@
             this.Controls.Add(this.lblPosX);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grpProg);
             this.Controls.Add(this.grpMain);
+            this.Controls.Add(this.grpProg);
             this.Name = "Form1";
             this.Text = "ODEM1.3";
             this.Load += new System.EventHandler(this.Form1_Load);

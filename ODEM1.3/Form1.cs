@@ -131,30 +131,25 @@ namespace ODEM1._3
                 btnPiston4.BackColor = Color.LightGray;
             }
         }
-
         private void btnProg21_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(1, "MULTI_PROG_NUM");
             read_multi_prog();
         }
-
         private void btnProg22_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(2, "MULTI_PROG_NUM");
             read_multi_prog();
         }
-
         private void btnProg23_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(3, "MULTI_PROG_NUM");
             read_multi_prog();
         }
-
         private void btnStart_multi_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(1, "RUN_MULTI");
         }
-
         private void btnGrab_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(1, "GRAB_CMD");
@@ -175,7 +170,6 @@ namespace ODEM1._3
         {
             _ACS.WriteVariable(1, "RUN_SINGLE");
         }
-
         private void btnSetMulti_Click(object sender, EventArgs e)
         {
             multi[((int)multi_prog_num), 1] = Convert.ToInt16(txtBathT11.Text);
@@ -450,15 +444,31 @@ namespace ODEM1._3
                 screenZ = Convert.ToInt32(zPos * xRatio);
                 lblScreenX.Text = Convert.ToString(screenX);
 
-                lblT1.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T1"))) + "   [min]";
-                lblT2.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T2"))) + "   [min]";
-                lblT3.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T3"))) + "   [min]";
-                lblT4.Text = "Time Left:   " + Convert.ToString(Convert.ToInt32(_ACS.ReadVariable("T4"))) + "   [min]";
+                TimeSpan time = TimeSpan.FromSeconds(Convert.ToDouble(_ACS.ReadVariable("T1"))*60);
+                lblT1.Text = "Time Left:   " + string.Format("{0:D2}:{1:D2}", (int)time.TotalMinutes, time.Seconds)  ;
+                time = TimeSpan.FromSeconds(Convert.ToDouble(_ACS.ReadVariable("T2")) * 60);
+                lblT2.Text = "Time Left:   " + string.Format("{0:D2}:{1:D2}", (int)time.TotalMinutes, time.Seconds);
+                time = TimeSpan.FromSeconds(Convert.ToDouble(_ACS.ReadVariable("T3")) * 60);
+                lblT3.Text = "Time Left:   " + string.Format("{0:D2}:{1:D2}", (int)time.TotalMinutes, time.Seconds);
+                time = TimeSpan.FromSeconds(Convert.ToDouble(_ACS.ReadVariable("T4")) * 60);
+                lblT4.Text = "Time Left:   " + string.Format("{0:D2}:{1:D2}", (int)time.TotalMinutes, time.Seconds);
 
                 if (Convert.ToDouble(_ACS.ReadVariable("PIST1"))==1) { btnPiston1.BackColor = Color.LightBlue; } else { btnPiston1.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("PIST2")) == 1) { btnPiston2.BackColor = Color.LightBlue; } else { btnPiston2.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("PIST3")) == 1) { btnPiston3.BackColor = Color.LightBlue; } else { btnPiston3.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("PIST4")) == 1) { btnPiston4.BackColor = Color.LightBlue; } else { btnPiston4.BackColor = Color.LightGray; }
+
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN1")) == 1)     { btnSensor1.BackColor = Color.LightBlue; } else   { btnSensor1.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN2")) == 1)     { btnSensor2.BackColor = Color.LightBlue; } else   { btnSensor2.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN3")) == 1)     { btnSensor3.BackColor = Color.LightBlue; } else   { btnSensor3.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN4")) == 1)     { btnSensor4.BackColor = Color.LightBlue; } else   { btnSensor4.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN_IN")) == 1)   { btnSensorIn.BackColor = Color.LightBlue; } else  { btnSensorIn.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN_OUT")) == 1) { btnSensorOut.BackColor = Color.LightBlue; } else { btnSensor1.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN_HOME_X")) == 1) { btnHomeX.BackColor = Color.LightBlue; } else { btnHomeX.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN_HOME_Z")) == 1) { btnHomeZ.BackColor = Color.LightBlue; } else { btnHomeZ.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN_STATION")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN_BSKT")) == 1) { btnZbasket.BackColor = Color.LightBlue; } else { btnZbasket.BackColor = Color.LightGray; }
+
 
                 if (Homed)
                 {
@@ -553,6 +563,7 @@ namespace ODEM1._3
             if (single[((int)single_prog_num), 7] == 0) { chkPist2.Checked = false; } else { chkPist2.Checked = true; }
             if (single[((int)single_prog_num), 8] == 0) { chkPist3.Checked = false; } else { chkPist3.Checked = true; }
             if (single[((int)single_prog_num), 9] == 0) { chkPist4.Checked = false; } else { chkPist4.Checked = true; }
+
         }
         private void read_multi_prog()
         {
