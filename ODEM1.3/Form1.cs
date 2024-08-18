@@ -463,7 +463,7 @@ namespace ODEM1._3
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN3")) == 1)     { btnSensor3.BackColor = Color.LightBlue; } else   { btnSensor3.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN4")) == 1)     { btnSensor4.BackColor = Color.LightBlue; } else   { btnSensor4.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN_IN")) == 1)   { btnSensorIn.BackColor = Color.LightBlue; } else  { btnSensorIn.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN_OUT")) == 1) { btnSensorOut.BackColor = Color.LightBlue; } else { btnSensor1.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("SEN_OUT")) == 1) { btnSensorOut.BackColor = Color.LightBlue; } else { btnSensorOut.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN_HOME_X")) == 1) { btnHomeX.BackColor = Color.LightBlue; } else { btnHomeX.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN_HOME_Z")) == 1) { btnHomeZ.BackColor = Color.LightBlue; } else { btnHomeZ.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN_STATION")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }

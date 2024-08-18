@@ -200,7 +200,7 @@
             this.txtIP.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIP.Size = new System.Drawing.Size(118, 24);
             this.txtIP.TabIndex = 0;
-            this.txtIP.Text = "192.168.120.22";
+            this.txtIP.Text = "192.168.1.213";
             // 
             // grpMain
             // 
@@ -1500,10 +1500,6 @@
             // 
             // grpButtons
             // 
-            this.grpButtons.Controls.Add(this.lblScreenX);
-            this.grpButtons.Controls.Add(this.label11);
-            this.grpButtons.Controls.Add(this.lblRatioX);
-            this.grpButtons.Controls.Add(this.fggfgf);
             this.grpButtons.Controls.Add(this.btnMain);
             this.grpButtons.Controls.Add(this.btnProg);
             this.grpButtons.Location = new System.Drawing.Point(438, 10);
@@ -1516,41 +1512,45 @@
             // 
             this.lblScreenX.AutoSize = true;
             this.lblScreenX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScreenX.Location = new System.Drawing.Point(364, 49);
+            this.lblScreenX.Location = new System.Drawing.Point(1086, 58);
             this.lblScreenX.Name = "lblScreenX";
             this.lblScreenX.Size = new System.Drawing.Size(16, 18);
             this.lblScreenX.TabIndex = 13;
             this.lblScreenX.Text = "0";
+            this.lblScreenX.Visible = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(278, 48);
+            this.label11.Location = new System.Drawing.Point(1019, 58);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 18);
             this.label11.TabIndex = 12;
             this.label11.Text = "screenX: ";
+            this.label11.Visible = false;
             // 
             // lblRatioX
             // 
             this.lblRatioX.AutoSize = true;
             this.lblRatioX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRatioX.Location = new System.Drawing.Point(363, 22);
+            this.lblRatioX.Location = new System.Drawing.Point(1073, 24);
             this.lblRatioX.Name = "lblRatioX";
             this.lblRatioX.Size = new System.Drawing.Size(16, 18);
             this.lblRatioX.TabIndex = 11;
             this.lblRatioX.Text = "0";
+            this.lblRatioX.Visible = false;
             // 
             // fggfgf
             // 
             this.fggfgf.AutoSize = true;
             this.fggfgf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fggfgf.Location = new System.Drawing.Point(278, 22);
+            this.fggfgf.Location = new System.Drawing.Point(1008, 24);
             this.fggfgf.Name = "fggfgf";
             this.fggfgf.Size = new System.Drawing.Size(59, 18);
             this.fggfgf.TabIndex = 11;
             this.fggfgf.Text = "ratio X: ";
+            this.fggfgf.Visible = false;
             // 
             // btnHome
             // 
@@ -1577,9 +1577,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1541, 900);
+            this.Controls.Add(this.lblScreenX);
             this.Controls.Add(this.btnManual);
+            this.Controls.Add(this.lblRatioX);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.grpButtons);
+            this.Controls.Add(this.fggfgf);
             this.Controls.Add(this.lblPosZ);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPosX);
@@ -1602,7 +1606,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grpButtons.ResumeLayout(false);
-            this.grpButtons.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
