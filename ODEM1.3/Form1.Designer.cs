@@ -375,6 +375,7 @@
             this.btnStop.TabIndex = 27;
             this.btnStop.Text = "STOP";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnHomeZ
             // 

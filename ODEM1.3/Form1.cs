@@ -150,6 +150,12 @@ namespace ODEM1._3
         {
             _ACS.WriteVariable(1, "RUN_MULTI");
         }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnGrab_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(1, "GRAB_CMD");
