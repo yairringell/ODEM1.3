@@ -40,7 +40,7 @@ namespace ODEM1._3
 
             WindowState = FormWindowState.Maximized;
             machineLength = this.Size.Width - 300;
-            xRatio = Convert.ToDouble(machineLength) /3000;
+            xRatio = Convert.ToDouble(machineLength) / 3525000; //3295000;
             lblRatioX.Text= Convert.ToString(xRatio);
             machineHeight = machineLength / 5;
             bathGap = 10;//machineLength / 20;
@@ -70,11 +70,13 @@ namespace ODEM1._3
             {
                 pistonOn1 = 1;
                 btnPiston1.BackColor = Color.LightBlue;
+                _ACS.WriteVariable(1, "PISTONS1_CMD");
             }
             else
             {
                 pistonOn1 = 0;
                 btnPiston1.BackColor = Color.LightGray;
+                _ACS.WriteVariable(0, "PISTONS1_CMD");
             }
         }
         private void btnPiston2_Click(object sender, EventArgs e)
@@ -83,11 +85,13 @@ namespace ODEM1._3
             {
                 pistonOn2 = 1;
                 btnPiston2.BackColor = Color.LightBlue;
+                _ACS.WriteVariable(1, "PISTONS2_CMD");
             }
             else
             {
                 pistonOn2 = 0;
                 btnPiston2.BackColor = Color.LightGray;
+                _ACS.WriteVariable(0, "PISTONS2_CMD");
             }
         }
         private void btnPiston3_Click(object sender, EventArgs e)
@@ -96,11 +100,13 @@ namespace ODEM1._3
             {
                 pistonOn3 = 1;
                 btnPiston3.BackColor = Color.LightBlue;
+                _ACS.WriteVariable(1, "PISTONS3_CMD");
             }
             else
             {
                 pistonOn3 = 0;
                 btnPiston3.BackColor = Color.LightGray;
+                _ACS.WriteVariable(0, "PISTONS3_CMD");
             }
         }
         private void btnProg1_Click(object sender, EventArgs e)
@@ -124,11 +130,13 @@ namespace ODEM1._3
             {
                 pistonOn4 = 1;
                 btnPiston4.BackColor = Color.LightBlue;
+                _ACS.WriteVariable(1, "PISTONS4_CMD");
             }
             else
             {
                 pistonOn4 = 0;
                 btnPiston4.BackColor = Color.LightGray;
+                _ACS.WriteVariable(0, "PISTONS4_CMD");
             }
         }
         private void btnProg21_Click(object sender, EventArgs e)
@@ -446,8 +454,8 @@ namespace ODEM1._3
 
                 xPos = Convert.ToDouble(Axis1_FPOS);
                 zPos = Convert.ToDouble(Axis2_FPOS);
-                screenX =Convert.ToInt32( xPos * xRatio);
-                screenZ = Convert.ToInt32(zPos * xRatio);
+                screenX =Convert.ToInt32( xPos * xRatio) + bathLength / 2;
+                screenZ = -Convert.ToInt32(zPos * xRatio);
                 lblScreenX.Text = Convert.ToString(screenX);
 
                 TimeSpan time = TimeSpan.FromSeconds(Convert.ToDouble(_ACS.ReadVariable("T1"))*60);
@@ -459,10 +467,10 @@ namespace ODEM1._3
                 time = TimeSpan.FromSeconds(Convert.ToDouble(_ACS.ReadVariable("T4")) * 60);
                 lblT4.Text = "Time Left:   " + string.Format("{0:D2}:{1:D2}", (int)time.TotalMinutes, time.Seconds);
 
-                if (Convert.ToDouble(_ACS.ReadVariable("PIST1"))==1) { btnPiston1.BackColor = Color.LightBlue; } else { btnPiston1.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("PIST2")) == 1) { btnPiston2.BackColor = Color.LightBlue; } else { btnPiston2.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("PIST3")) == 1) { btnPiston3.BackColor = Color.LightBlue; } else { btnPiston3.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("PIST4")) == 1) { btnPiston4.BackColor = Color.LightBlue; } else { btnPiston4.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("PISTONS1"))==1) { btnPiston1.BackColor = Color.LightBlue; } else { btnPiston1.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("PISTONS2")) == 1) { btnPiston2.BackColor = Color.LightBlue; } else { btnPiston2.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("PISTONS3")) == 1) { btnPiston3.BackColor = Color.LightBlue; } else { btnPiston3.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("PISTONS4")) == 1) { btnPiston4.BackColor = Color.LightBlue; } else { btnPiston4.BackColor = Color.LightGray; }
 
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN1")) == 1)     { btnSensor1.BackColor = Color.LightBlue; } else   { btnSensor1.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN2")) == 1)     { btnSensor2.BackColor = Color.LightBlue; } else   { btnSensor2.BackColor = Color.LightGray; }
@@ -475,14 +483,21 @@ namespace ODEM1._3
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN_STATION")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("SEN_BSKT")) == 1) { btnZbasket.BackColor = Color.LightBlue; } else { btnZbasket.BackColor = Color.LightGray; }
 
+                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN_Z")) == 1) { btnZbasket.BackColor = Color.LightBlue; } else { btnZbasket.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("sFORK_S")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }
+
+                lblStation.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATION_NUM")));
+
 
                 if (Homed)
                 {
-                    btnZaxis.Location = new Point(cornerX+ screenX-15, cornerZ + Convert.ToInt32(Axis2_FPOS)-machineHeight +30);
+                    btnZaxis.Location = new Point(cornerX + screenX - 15, cornerZ + screenZ - machineHeight + 100);// Convert.ToInt32(Axis2_FPOS)-machineHeight +30);
                     btnSensorZ.Location = new Point(cornerX + screenX-15, cornerZ );
                     btnHomeZ.Location = new Point(cornerX + screenX-15, cornerZ-(machineHeight/5));
-                    btnZbasket.Location = new Point(cornerX + screenX-15, cornerZ + Convert.ToInt32(Axis2_FPOS) +30);
+                    btnZbasket.Location = new Point(cornerX + screenX - 15, cornerZ + screenZ - machineHeight/6 + 100);//Convert.ToInt32(Axis2_FPOS) +30);
                 }
+
+
             }
         }
 
@@ -546,6 +561,11 @@ namespace ODEM1._3
             btnPiston2.BackColor = Color.LightGray; 
             btnPiston3.BackColor = Color.LightGray;
             btnPiston4.BackColor = Color.LightGray;
+
+            picWater.Size = new Size(bathLength*4, machineHeight / 3+50);
+            picWater.Location = new Point(cornerX + 1 * bathLength + 3 * bathGap,  machineHeight*2+ machineHeight/3-15);
+            
+            
         }
 
         private void read_single_prog()
@@ -627,6 +647,26 @@ namespace ODEM1._3
             if (multi[((int)multi_prog_num), 39] == 0) { chkPist44.Checked = false; } else { chkPist44.Checked = true; }
 
 
+        }
+        public void HandleButtonClick(int number)
+        {
+            // Perform actions with the number
+            MessageBox.Show($"You clicked button with number: {number}");
+        }
+        private void Tap_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                // Convert button text to an integer and call the function
+                if (int.TryParse(button.Text, out int number))
+                {
+                    HandleButtonClick(number);
+                }
+                else
+                {
+                    MessageBox.Show("Button text is not a valid number.");
+                }
+            }
         }
     }
 }
