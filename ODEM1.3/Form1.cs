@@ -40,7 +40,7 @@ namespace ODEM1._3
 
             WindowState = FormWindowState.Maximized;
             machineLength = this.Size.Width - 300;
-            xRatio = Convert.ToDouble(machineLength) / 3525000; //3295000;
+            xRatio = Convert.ToDouble(machineLength) / 3825000; //3295000;
             lblRatioX.Text= Convert.ToString(xRatio);
             machineHeight = machineLength / 5;
             bathGap = 10;//machineLength / 20;
@@ -161,7 +161,106 @@ namespace ODEM1._3
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-
+            _ACS.WriteVariable(1, "STOP_PROG");
+        }
+        private void btnTap1_Click(object sender, EventArgs e)
+        {
+            if (btnTap1.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP1");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP1");
+            }
+        }
+        private void btnTap2_Click(object sender, EventArgs e)
+        {
+            if (btnTap2.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP2");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP2");
+            }
+        }
+        private void btnTap3_Click(object sender, EventArgs e)
+        {
+            if (btnTap3.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP3");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP3");
+            }
+        }
+        private void btnTap4_Click(object sender, EventArgs e)
+        {
+            if (btnTap4.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP4");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP4");
+            }
+        }
+        private void btnTap5_Click(object sender, EventArgs e)
+        {
+            if (btnTap5.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP5");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP5");
+            }
+        }
+        private void btnTap6_Click(object sender, EventArgs e)
+        {
+            if (btnTap6.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP6");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP6");
+            }
+        }
+        private void btnTap7_Click(object sender, EventArgs e)
+        {
+            if (btnTap7.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP7");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP7");
+            }
+        }
+        private void btnTap8_Click(object sender, EventArgs e)
+        {
+            if (btnTap8.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP8");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP8");
+            }
+        }
+        private void btnTap9_Click(object sender, EventArgs e)
+        {
+            if (btnTap9.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "TAP9");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "TAP9");
+            }
         }
 
         private void btnGrab_Click(object sender, EventArgs e)
@@ -485,8 +584,26 @@ namespace ODEM1._3
 
                 if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN_Z")) == 1) { btnZbasket.BackColor = Color.LightBlue; } else { btnZbasket.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("sFORK_S")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("STATE"))<9000) { grpMain.BackColor = Color.AliceBlue; } else { grpMain.BackColor = Color.Pink; }
+
+                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN1")) ==1) { btnSensor1.BackColor = Color.LightBlue; } else { btnSensor1.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN2")) ==1) { btnSensor2.BackColor = Color.LightBlue; } else { btnSensor2.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN3")) ==1) { btnSensor3.BackColor = Color.LightBlue; } else { btnSensor3.BackColor = Color.LightGray; }
+                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN4")) ==1) { btnSensor4.BackColor = Color.LightBlue; } else { btnSensor4.BackColor = Color.LightGray; }
+
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1.BackColor = Color.Gold; } else { btnTap1.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2.BackColor = Color.Gold; } else { btnTap2.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP3")) == 1) { btnTap3.BackColor = Color.Gold; } else { btnTap3.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4.BackColor = Color.Gold; } else { btnTap4.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP5")) == 1) { btnTap5.BackColor = Color.Gold; } else { btnTap5.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP6")) == 1) { btnTap6.BackColor = Color.Gold; } else { btnTap6.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7.BackColor = Color.Gold; } else { btnTap7.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP8")) == 1) { btnTap8.BackColor = Color.Gold; } else { btnTap8.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9.BackColor = Color.Gold; } else { btnTap9.BackColor = Color.LightGray; }
+
 
                 lblStation.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATION_NUM")));
+                lblError.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATE")));
 
 
                 if (Homed)
@@ -562,9 +679,6 @@ namespace ODEM1._3
             btnPiston3.BackColor = Color.LightGray;
             btnPiston4.BackColor = Color.LightGray;
 
-            picWater.Size = new Size(bathLength*4, machineHeight / 3+50);
-            picWater.Location = new Point(cornerX + 1 * bathLength + 3 * bathGap,  machineHeight*2+ machineHeight/3-15);
-            
             
         }
 
@@ -648,25 +762,7 @@ namespace ODEM1._3
 
 
         }
-        public void HandleButtonClick(int number)
-        {
-            // Perform actions with the number
-            MessageBox.Show($"You clicked button with number: {number}");
-        }
-        private void Tap_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (sender is Button button)
-            {
-                // Convert button text to an integer and call the function
-                if (int.TryParse(button.Text, out int number))
-                {
-                    HandleButtonClick(number);
-                }
-                else
-                {
-                    MessageBox.Show("Button text is not a valid number.");
-                }
-            }
-        }
+        
+        
     }
 }

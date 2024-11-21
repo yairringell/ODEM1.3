@@ -80,7 +80,6 @@
             this.btnJogUp = new System.Windows.Forms.Button();
             this.btnZaxis = new System.Windows.Forms.Button();
             this.btnXaxis = new System.Windows.Forms.Button();
-            this.picWater = new System.Windows.Forms.PictureBox();
             this.btnMain = new System.Windows.Forms.Button();
             this.btnProg = new System.Windows.Forms.Button();
             this.grpProg = new System.Windows.Forms.GroupBox();
@@ -165,19 +164,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblPosZ = new System.Windows.Forms.Label();
             this.grpButtons = new System.Windows.Forms.GroupBox();
+            this.lblError = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.lblStation = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.lblScreenX = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblRatioX = new System.Windows.Forms.Label();
             this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.lblStation = new System.Windows.Forms.Label();
+            this.btnTap9 = new System.Windows.Forms.Button();
+            this.chckJ1 = new System.Windows.Forms.CheckBox();
+            this.chckJ2 = new System.Windows.Forms.CheckBox();
+            this.chckJ3 = new System.Windows.Forms.CheckBox();
+            this.chckJ4 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
             this.grpJog.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picWater)).BeginInit();
             this.grpProg.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -216,7 +221,8 @@
             // 
             // grpMain
             // 
-            this.grpMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grpMain.BackColor = System.Drawing.Color.AliceBlue;
+            this.grpMain.Controls.Add(this.btnTap9);
             this.grpMain.Controls.Add(this.btnTap6);
             this.grpMain.Controls.Add(this.btnTap4);
             this.grpMain.Controls.Add(this.btnTap8);
@@ -253,93 +259,99 @@
             this.grpMain.Controls.Add(this.grpJog);
             this.grpMain.Controls.Add(this.btnZaxis);
             this.grpMain.Controls.Add(this.btnXaxis);
-            this.grpMain.Controls.Add(this.picWater);
             this.grpMain.Location = new System.Drawing.Point(1, 95);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(1526, 868);
+            this.grpMain.Size = new System.Drawing.Size(1748, 868);
             this.grpMain.TabIndex = 1;
             this.grpMain.TabStop = false;
             // 
             // btnTap6
             // 
             this.btnTap6.BackColor = System.Drawing.Color.Gold;
-            this.btnTap6.Location = new System.Drawing.Point(309, 716);
+            this.btnTap6.Location = new System.Drawing.Point(1077, 737);
             this.btnTap6.Name = "btnTap6";
             this.btnTap6.Size = new System.Drawing.Size(50, 50);
             this.btnTap6.TabIndex = 41;
             this.btnTap6.Text = "Tap6";
             this.btnTap6.UseVisualStyleBackColor = false;
+            this.btnTap6.Click += new System.EventHandler(this.btnTap6_Click);
             // 
             // btnTap4
             // 
             this.btnTap4.BackColor = System.Drawing.Color.Gold;
-            this.btnTap4.Location = new System.Drawing.Point(197, 716);
+            this.btnTap4.Location = new System.Drawing.Point(916, 737);
             this.btnTap4.Name = "btnTap4";
             this.btnTap4.Size = new System.Drawing.Size(50, 50);
             this.btnTap4.TabIndex = 40;
             this.btnTap4.Text = "Tap4";
             this.btnTap4.UseVisualStyleBackColor = false;
+            this.btnTap4.Click += new System.EventHandler(this.btnTap4_Click);
             // 
             // btnTap8
             // 
             this.btnTap8.BackColor = System.Drawing.Color.Gold;
-            this.btnTap8.Location = new System.Drawing.Point(253, 772);
+            this.btnTap8.Location = new System.Drawing.Point(1239, 737);
             this.btnTap8.Name = "btnTap8";
             this.btnTap8.Size = new System.Drawing.Size(50, 50);
             this.btnTap8.TabIndex = 39;
             this.btnTap8.Text = "Tap8";
             this.btnTap8.UseVisualStyleBackColor = false;
+            this.btnTap8.Click += new System.EventHandler(this.btnTap8_Click);
             // 
             // btnTap7
             // 
             this.btnTap7.BackColor = System.Drawing.Color.Gold;
-            this.btnTap7.Location = new System.Drawing.Point(197, 772);
+            this.btnTap7.Location = new System.Drawing.Point(1163, 737);
             this.btnTap7.Name = "btnTap7";
             this.btnTap7.Size = new System.Drawing.Size(50, 50);
             this.btnTap7.TabIndex = 38;
             this.btnTap7.Text = "Tap7";
             this.btnTap7.UseVisualStyleBackColor = false;
+            this.btnTap7.Click += new System.EventHandler(this.btnTap7_Click);
             // 
             // btnTap2
             // 
             this.btnTap2.BackColor = System.Drawing.Color.Gold;
-            this.btnTap2.Location = new System.Drawing.Point(253, 660);
+            this.btnTap2.Location = new System.Drawing.Point(752, 737);
             this.btnTap2.Name = "btnTap2";
             this.btnTap2.Size = new System.Drawing.Size(50, 50);
             this.btnTap2.TabIndex = 37;
             this.btnTap2.Text = "Tap2";
             this.btnTap2.UseVisualStyleBackColor = false;
+            this.btnTap2.Click += new System.EventHandler(this.btnTap2_Click);
             // 
             // btnTap5
             // 
             this.btnTap5.BackColor = System.Drawing.Color.Gold;
-            this.btnTap5.Location = new System.Drawing.Point(253, 716);
+            this.btnTap5.Location = new System.Drawing.Point(993, 737);
             this.btnTap5.Name = "btnTap5";
             this.btnTap5.Size = new System.Drawing.Size(50, 50);
             this.btnTap5.TabIndex = 36;
             this.btnTap5.Text = "Tap5";
             this.btnTap5.UseVisualStyleBackColor = false;
+            this.btnTap5.Click += new System.EventHandler(this.btnTap5_Click);
             // 
             // btnTap3
             // 
             this.btnTap3.BackColor = System.Drawing.Color.Gold;
-            this.btnTap3.Location = new System.Drawing.Point(309, 660);
+            this.btnTap3.Location = new System.Drawing.Point(833, 737);
             this.btnTap3.Name = "btnTap3";
             this.btnTap3.Size = new System.Drawing.Size(50, 50);
             this.btnTap3.TabIndex = 35;
             this.btnTap3.Text = "Tap3";
             this.btnTap3.UseVisualStyleBackColor = false;
+            this.btnTap3.Click += new System.EventHandler(this.btnTap3_Click);
             // 
             // btnTap1
             // 
             this.btnTap1.BackColor = System.Drawing.Color.Gold;
-            this.btnTap1.Location = new System.Drawing.Point(197, 660);
+            this.btnTap1.Location = new System.Drawing.Point(489, 430);
             this.btnTap1.Name = "btnTap1";
             this.btnTap1.Size = new System.Drawing.Size(50, 50);
             this.btnTap1.TabIndex = 34;
-            this.btnTap1.Text = "1";
+            this.btnTap1.Text = "Tap1";
             this.btnTap1.UseVisualStyleBackColor = false;
-            this.btnTap1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Tap_MouseClick);
+            this.btnTap1.Click += new System.EventHandler(this.btnTap1_Click);
             // 
             // lblT4
             // 
@@ -728,16 +740,6 @@
             this.btnXaxis.UseVisualStyleBackColor = true;
             this.btnXaxis.Click += new System.EventHandler(this.btnXaxis_Click);
             // 
-            // picWater
-            // 
-            this.picWater.BackgroundImage = global::ODEM1._3.Properties.Resources.WATER3;
-            this.picWater.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picWater.Location = new System.Drawing.Point(385, 629);
-            this.picWater.Name = "picWater";
-            this.picWater.Size = new System.Drawing.Size(704, 164);
-            this.picWater.TabIndex = 42;
-            this.picWater.TabStop = false;
-            // 
             // btnMain
             // 
             this.btnMain.Location = new System.Drawing.Point(6, 18);
@@ -773,6 +775,10 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.chckJ4);
+            this.groupBox3.Controls.Add(this.chckJ3);
+            this.groupBox3.Controls.Add(this.chckJ2);
+            this.groupBox3.Controls.Add(this.chckJ1);
             this.groupBox3.Controls.Add(this.btnProg23);
             this.groupBox3.Controls.Add(this.chkPist44);
             this.groupBox3.Controls.Add(this.btnProg22);
@@ -884,7 +890,7 @@
             // 
             this.chk24Air.AutoSize = true;
             this.chk24Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk24Air.Location = new System.Drawing.Point(1294, 279);
+            this.chk24Air.Location = new System.Drawing.Point(976, 324);
             this.chk24Air.Name = "chk24Air";
             this.chk24Air.Size = new System.Drawing.Size(66, 29);
             this.chk24Air.TabIndex = 60;
@@ -1007,7 +1013,7 @@
             // 
             this.chk23Air.AutoSize = true;
             this.chk23Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk23Air.Location = new System.Drawing.Point(1294, 212);
+            this.chk23Air.Location = new System.Drawing.Point(650, 324);
             this.chk23Air.Name = "chk23Air";
             this.chk23Air.Size = new System.Drawing.Size(66, 29);
             this.chk23Air.TabIndex = 48;
@@ -1130,7 +1136,7 @@
             // 
             this.chk22Air.AutoSize = true;
             this.chk22Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk22Air.Location = new System.Drawing.Point(1294, 149);
+            this.chk22Air.Location = new System.Drawing.Point(332, 324);
             this.chk22Air.Name = "chk22Air";
             this.chk22Air.Size = new System.Drawing.Size(66, 29);
             this.chk22Air.TabIndex = 34;
@@ -1253,7 +1259,7 @@
             // 
             this.chk21Air.AutoSize = true;
             this.chk21Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk21Air.Location = new System.Drawing.Point(1294, 82);
+            this.chk21Air.Location = new System.Drawing.Point(25, 324);
             this.chk21Air.Name = "chk21Air";
             this.chk21Air.Size = new System.Drawing.Size(66, 29);
             this.chk21Air.TabIndex = 22;
@@ -1614,6 +1620,8 @@
             // 
             // grpButtons
             // 
+            this.grpButtons.Controls.Add(this.lblError);
+            this.grpButtons.Controls.Add(this.label25);
             this.grpButtons.Controls.Add(this.lblStation);
             this.grpButtons.Controls.Add(this.btnMain);
             this.grpButtons.Controls.Add(this.btnProg);
@@ -1623,6 +1631,46 @@
             this.grpButtons.Size = new System.Drawing.Size(564, 73);
             this.grpButtons.TabIndex = 8;
             this.grpButtons.TabStop = false;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Location = new System.Drawing.Point(414, 29);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(16, 18);
+            this.lblError.TabIndex = 16;
+            this.lblError.Text = "0";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(341, 29);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(67, 18);
+            this.label25.TabIndex = 15;
+            this.label25.Text = "ERROR:";
+            // 
+            // lblStation
+            // 
+            this.lblStation.AutoSize = true;
+            this.lblStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStation.Location = new System.Drawing.Point(310, 29);
+            this.lblStation.Name = "lblStation";
+            this.lblStation.Size = new System.Drawing.Size(16, 18);
+            this.lblStation.TabIndex = 14;
+            this.lblStation.Text = "0";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(229, 29);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(75, 18);
+            this.label24.TabIndex = 14;
+            this.label24.Text = "STATION:";
             // 
             // lblScreenX
             // 
@@ -1688,31 +1736,66 @@
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
-            // label24
+            // btnTap9
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(229, 29);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(75, 18);
-            this.label24.TabIndex = 14;
-            this.label24.Text = "STATION:";
+            this.btnTap9.BackColor = System.Drawing.Color.Gold;
+            this.btnTap9.Location = new System.Drawing.Point(1582, 430);
+            this.btnTap9.Name = "btnTap9";
+            this.btnTap9.Size = new System.Drawing.Size(50, 50);
+            this.btnTap9.TabIndex = 43;
+            this.btnTap9.Text = "Tap9";
+            this.btnTap9.UseVisualStyleBackColor = false;
+            this.btnTap9.Click += new System.EventHandler(this.btnTap9_Click);
             // 
-            // lblStation
+            // chckJ1
             // 
-            this.lblStation.AutoSize = true;
-            this.lblStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStation.Location = new System.Drawing.Point(310, 29);
-            this.lblStation.Name = "lblStation";
-            this.lblStation.Size = new System.Drawing.Size(16, 18);
-            this.lblStation.TabIndex = 14;
-            this.lblStation.Text = "0";
+            this.chckJ1.AutoSize = true;
+            this.chckJ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckJ1.Location = new System.Drawing.Point(131, 324);
+            this.chckJ1.Name = "chckJ1";
+            this.chckJ1.Size = new System.Drawing.Size(71, 29);
+            this.chckJ1.TabIndex = 65;
+            this.chckJ1.Text = "JET";
+            this.chckJ1.UseVisualStyleBackColor = true;
+            // 
+            // chckJ2
+            // 
+            this.chckJ2.AutoSize = true;
+            this.chckJ2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckJ2.Location = new System.Drawing.Point(430, 324);
+            this.chckJ2.Name = "chckJ2";
+            this.chckJ2.Size = new System.Drawing.Size(71, 29);
+            this.chckJ2.TabIndex = 66;
+            this.chckJ2.Text = "JET";
+            this.chckJ2.UseVisualStyleBackColor = true;
+            // 
+            // chckJ3
+            // 
+            this.chckJ3.AutoSize = true;
+            this.chckJ3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckJ3.Location = new System.Drawing.Point(751, 324);
+            this.chckJ3.Name = "chckJ3";
+            this.chckJ3.Size = new System.Drawing.Size(71, 29);
+            this.chckJ3.TabIndex = 67;
+            this.chckJ3.Text = "JET";
+            this.chckJ3.UseVisualStyleBackColor = true;
+            // 
+            // chckJ4
+            // 
+            this.chckJ4.AutoSize = true;
+            this.chckJ4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckJ4.Location = new System.Drawing.Point(1062, 324);
+            this.chckJ4.Name = "chckJ4";
+            this.chckJ4.Size = new System.Drawing.Size(71, 29);
+            this.chckJ4.TabIndex = 68;
+            this.chckJ4.Text = "JET";
+            this.chckJ4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1541, 900);
+            this.ClientSize = new System.Drawing.Size(1645, 900);
             this.Controls.Add(this.lblScreenX);
             this.Controls.Add(this.btnManual);
             this.Controls.Add(this.lblRatioX);
@@ -1725,8 +1808,8 @@
             this.Controls.Add(this.lblPosX);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grpMain);
             this.Controls.Add(this.grpProg);
+            this.Controls.Add(this.grpMain);
             this.Name = "Form1";
             this.Text = "ODEM1.3";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1736,7 +1819,6 @@
             this.grpMain.PerformLayout();
             this.grpActions.ResumeLayout(false);
             this.grpJog.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picWater)).EndInit();
             this.grpProg.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -1892,9 +1974,15 @@
         private System.Windows.Forms.Button btnTap8;
         private System.Windows.Forms.Button btnTap7;
         private System.Windows.Forms.Button btnTap2;
-        private System.Windows.Forms.PictureBox picWater;
         private System.Windows.Forms.Label lblStation;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btnTap9;
+        private System.Windows.Forms.CheckBox chckJ4;
+        private System.Windows.Forms.CheckBox chckJ3;
+        private System.Windows.Forms.CheckBox chckJ2;
+        private System.Windows.Forms.CheckBox chckJ1;
     }
 }
 
