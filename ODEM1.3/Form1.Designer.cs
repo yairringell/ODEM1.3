@@ -179,6 +179,7 @@
             this.chckJ2 = new System.Windows.Forms.CheckBox();
             this.chckJ3 = new System.Windows.Forms.CheckBox();
             this.chckJ4 = new System.Windows.Forms.CheckBox();
+            this.chckJ = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -1381,6 +1382,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.chckJ);
             this.groupBox2.Controls.Add(this.chk1Air);
             this.groupBox2.Controls.Add(this.chkPist4);
             this.groupBox2.Controls.Add(this.chkPist3);
@@ -1410,7 +1412,7 @@
             // 
             this.chk1Air.AutoSize = true;
             this.chk1Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk1Air.Location = new System.Drawing.Point(1294, 82);
+            this.chk1Air.Location = new System.Drawing.Point(650, 138);
             this.chk1Air.Name = "chk1Air";
             this.chk1Air.Size = new System.Drawing.Size(66, 29);
             this.chk1Air.TabIndex = 21;
@@ -1791,6 +1793,17 @@
             this.chckJ4.Text = "JET";
             this.chckJ4.UseVisualStyleBackColor = true;
             // 
+            // chckJ
+            // 
+            this.chckJ.AutoSize = true;
+            this.chckJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckJ.Location = new System.Drawing.Point(972, 138);
+            this.chckJ.Name = "chckJ";
+            this.chckJ.Size = new System.Drawing.Size(71, 29);
+            this.chckJ.TabIndex = 22;
+            this.chckJ.Text = "JET";
+            this.chckJ.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1983,6 +1996,7 @@
         private System.Windows.Forms.CheckBox chckJ3;
         private System.Windows.Forms.CheckBox chckJ2;
         private System.Windows.Forms.CheckBox chckJ1;
+        private System.Windows.Forms.CheckBox chckJ;
     }
 }
 
