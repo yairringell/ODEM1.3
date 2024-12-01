@@ -598,6 +598,7 @@ namespace ODEM1._3
 
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1.BackColor = Color.Gold; } else { btnTap1.BackColor = Color.LightGray; }
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1W1.BackColor = Color.Blue; } else { btnTap1W1.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1W2.BackColor = Color.Blue; } else { btnTap1W2.BackColor = Color.LightGray; }
 
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2.BackColor = Color.Gold; } else { btnTap2.BackColor = Color.LightGray; }
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2W1.BackColor = Color.Blue; } else { btnTap2W1.BackColor = Color.LightGray; }
