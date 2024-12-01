@@ -597,14 +597,36 @@ namespace ODEM1._3
                 if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN4")) ==1) { btnSensor4.BackColor = Color.LightBlue; } else { btnSensor4.BackColor = Color.LightGray; }
 
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1.BackColor = Color.Gold; } else { btnTap1.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1W1.BackColor = Color.Blue; } else { btnTap1W1.BackColor = Color.LightGray; }
+
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2.BackColor = Color.Gold; } else { btnTap2.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2W1.BackColor = Color.Blue; } else { btnTap2W1.BackColor = Color.LightGray; }
+
+
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP3")) == 1) { btnTap3.BackColor = Color.Gold; } else { btnTap3.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP3")) == 1) { btnTap3W1.BackColor = Color.Blue; } else { btnTap3W1.BackColor = Color.LightGray; }
+
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4.BackColor = Color.Gold; } else { btnTap4.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4W1.BackColor = Color.Blue; } else { btnTap4W1.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4W2.BackColor = Color.Blue; } else { btnTap4W2.BackColor = Color.LightGray; }
+
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP5")) == 1) { btnTap5.BackColor = Color.Gold; } else { btnTap5.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP5")) == 1) { btnTap5W1.BackColor = Color.Blue; } else { btnTap5W1.BackColor = Color.LightGray; }
+
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP6")) == 1) { btnTap6.BackColor = Color.Gold; } else { btnTap6.BackColor = Color.LightGray; }
+                
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7.BackColor = Color.Gold; } else { btnTap7.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7W1.BackColor = Color.Blue; } else { btnTap7W1.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7W2.BackColor = Color.Blue; } else { btnTap7W2.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7W3.BackColor = Color.Blue; } else { btnTap7W3.BackColor = Color.LightGray; }
+
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP8")) == 1) { btnTap8.BackColor = Color.Gold; } else { btnTap8.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP8")) == 1) { btnTap8W1.BackColor = Color.Blue; } else { btnTap8W1.BackColor = Color.LightGray; }
+
                 if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9.BackColor = Color.Gold; } else { btnTap9.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W1.BackColor = Color.Blue; } else { btnTap9W1.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W2.BackColor = Color.Blue; } else { btnTap9W2.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W3.BackColor = Color.Blue; } else { btnTap9W3.BackColor = Color.LightGray; }
 
 
                 lblStation.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATION_NUM")));
