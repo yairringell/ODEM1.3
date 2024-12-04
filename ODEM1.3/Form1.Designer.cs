@@ -33,14 +33,14 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.grpMain = new System.Windows.Forms.GroupBox();
+            this.btnTap9W1 = new System.Windows.Forms.Button();
+            this.btnTap1W1 = new System.Windows.Forms.Button();
             this.btnFoam = new System.Windows.Forms.Button();
             this.btnJet = new System.Windows.Forms.Button();
             this.btnTap4 = new System.Windows.Forms.Button();
             this.btnTap4W1 = new System.Windows.Forms.Button();
-            this.btnTap7W3 = new System.Windows.Forms.Button();
             this.btnTap7 = new System.Windows.Forms.Button();
             this.btnTap7W1 = new System.Windows.Forms.Button();
-            this.btnTap9W3 = new System.Windows.Forms.Button();
             this.btnTap8W1 = new System.Windows.Forms.Button();
             this.btnTap5W1 = new System.Windows.Forms.Button();
             this.btnTap3W1 = new System.Windows.Forms.Button();
@@ -194,18 +194,11 @@
             this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
-            this.btnTap1W1 = new System.Windows.Forms.Button();
-            this.btnTap9W1 = new System.Windows.Forms.Button();
+            this.btnHeight1 = new System.Windows.Forms.Button();
+            this.btnHeight2 = new System.Windows.Forms.Button();
+            this.btnHeight3 = new System.Windows.Forms.Button();
+            this.btnHeight4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -244,20 +237,28 @@
             this.txtIP.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIP.Size = new System.Drawing.Size(118, 24);
             this.txtIP.TabIndex = 0;
-            this.txtIP.Text = "172.16.1.47";
+            this.txtIP.Text = "10.0.0.100";
             // 
             // grpMain
             // 
+            this.grpMain.Controls.Add(this.button1);
+            this.grpMain.Controls.Add(this.btnSensor4);
+            this.grpMain.Controls.Add(this.btnSensor3);
+            this.grpMain.Controls.Add(this.btnSensor2);
+            this.grpMain.Controls.Add(this.btnHeight4);
+            this.grpMain.Controls.Add(this.btnHeight3);
+            this.grpMain.Controls.Add(this.btnHeight2);
+            this.grpMain.Controls.Add(this.btnSensor1);
+            this.grpMain.Controls.Add(this.lblT1);
+            this.grpMain.Controls.Add(this.btnHeight1);
             this.grpMain.Controls.Add(this.btnTap9W1);
             this.grpMain.Controls.Add(this.btnTap1W1);
             this.grpMain.Controls.Add(this.btnFoam);
             this.grpMain.Controls.Add(this.btnJet);
             this.grpMain.Controls.Add(this.btnTap4);
             this.grpMain.Controls.Add(this.btnTap4W1);
-            this.grpMain.Controls.Add(this.btnTap7W3);
             this.grpMain.Controls.Add(this.btnTap7);
             this.grpMain.Controls.Add(this.btnTap7W1);
-            this.grpMain.Controls.Add(this.btnTap9W3);
             this.grpMain.Controls.Add(this.btnTap8W1);
             this.grpMain.Controls.Add(this.btnTap5W1);
             this.grpMain.Controls.Add(this.btnTap3W1);
@@ -272,17 +273,12 @@
             this.grpMain.Controls.Add(this.lblT4);
             this.grpMain.Controls.Add(this.lblT3);
             this.grpMain.Controls.Add(this.lblT2);
-            this.grpMain.Controls.Add(this.lblT1);
             this.grpMain.Controls.Add(this.btnZbasket);
             this.grpMain.Controls.Add(this.grpActions);
             this.grpMain.Controls.Add(this.btnHomeZ);
             this.grpMain.Controls.Add(this.btnHomeX);
             this.grpMain.Controls.Add(this.btnSensorZ);
             this.grpMain.Controls.Add(this.btnSensorOut);
-            this.grpMain.Controls.Add(this.btnSensor4);
-            this.grpMain.Controls.Add(this.btnSensor3);
-            this.grpMain.Controls.Add(this.btnSensor2);
-            this.grpMain.Controls.Add(this.btnSensor1);
             this.grpMain.Controls.Add(this.btnSensorIn);
             this.grpMain.Controls.Add(this.btnPiston4);
             this.grpMain.Controls.Add(this.btnPiston3);
@@ -307,6 +303,22 @@
             this.grpMain.TabIndex = 1;
             this.grpMain.TabStop = false;
             // 
+            // btnTap9W1
+            // 
+            this.btnTap9W1.Location = new System.Drawing.Point(1543, 448);
+            this.btnTap9W1.Name = "btnTap9W1";
+            this.btnTap9W1.Size = new System.Drawing.Size(40, 18);
+            this.btnTap9W1.TabIndex = 59;
+            this.btnTap9W1.UseVisualStyleBackColor = true;
+            // 
+            // btnTap1W1
+            // 
+            this.btnTap1W1.Location = new System.Drawing.Point(503, 445);
+            this.btnTap1W1.Name = "btnTap1W1";
+            this.btnTap1W1.Size = new System.Drawing.Size(40, 18);
+            this.btnTap1W1.TabIndex = 58;
+            this.btnTap1W1.UseVisualStyleBackColor = true;
+            // 
             // btnFoam
             // 
             this.btnFoam.BackColor = System.Drawing.Color.Lime;
@@ -330,7 +342,7 @@
             // btnTap4
             // 
             this.btnTap4.BackColor = System.Drawing.Color.Gold;
-            this.btnTap4.Location = new System.Drawing.Point(1016, 698);
+            this.btnTap4.Location = new System.Drawing.Point(978, 432);
             this.btnTap4.Name = "btnTap4";
             this.btnTap4.Size = new System.Drawing.Size(50, 50);
             this.btnTap4.TabIndex = 40;
@@ -340,24 +352,16 @@
             // 
             // btnTap4W1
             // 
-            this.btnTap4W1.Location = new System.Drawing.Point(901, 714);
+            this.btnTap4W1.Location = new System.Drawing.Point(955, 448);
             this.btnTap4W1.Name = "btnTap4W1";
-            this.btnTap4W1.Size = new System.Drawing.Size(122, 18);
+            this.btnTap4W1.Size = new System.Drawing.Size(30, 18);
             this.btnTap4W1.TabIndex = 55;
             this.btnTap4W1.UseVisualStyleBackColor = true;
-            // 
-            // btnTap7W3
-            // 
-            this.btnTap7W3.Location = new System.Drawing.Point(1061, 713);
-            this.btnTap7W3.Name = "btnTap7W3";
-            this.btnTap7W3.Size = new System.Drawing.Size(122, 18);
-            this.btnTap7W3.TabIndex = 54;
-            this.btnTap7W3.UseVisualStyleBackColor = true;
             // 
             // btnTap7
             // 
             this.btnTap7.BackColor = System.Drawing.Color.Gold;
-            this.btnTap7.Location = new System.Drawing.Point(1297, 698);
+            this.btnTap7.Location = new System.Drawing.Point(1238, 432);
             this.btnTap7.Name = "btnTap7";
             this.btnTap7.Size = new System.Drawing.Size(50, 50);
             this.btnTap7.TabIndex = 38;
@@ -367,19 +371,11 @@
             // 
             // btnTap7W1
             // 
-            this.btnTap7W1.Location = new System.Drawing.Point(1199, 712);
+            this.btnTap7W1.Location = new System.Drawing.Point(1211, 448);
             this.btnTap7W1.Name = "btnTap7W1";
-            this.btnTap7W1.Size = new System.Drawing.Size(102, 18);
+            this.btnTap7W1.Size = new System.Drawing.Size(31, 18);
             this.btnTap7W1.TabIndex = 53;
             this.btnTap7W1.UseVisualStyleBackColor = true;
-            // 
-            // btnTap9W3
-            // 
-            this.btnTap9W3.Location = new System.Drawing.Point(1334, 711);
-            this.btnTap9W3.Name = "btnTap9W3";
-            this.btnTap9W3.Size = new System.Drawing.Size(122, 18);
-            this.btnTap9W3.TabIndex = 52;
-            this.btnTap9W3.UseVisualStyleBackColor = true;
             // 
             // btnTap8W1
             // 
@@ -545,16 +541,6 @@
             // grpActions
             // 
             this.grpActions.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpActions.Controls.Add(this.button10);
-            this.grpActions.Controls.Add(this.button9);
-            this.grpActions.Controls.Add(this.button7);
-            this.grpActions.Controls.Add(this.button8);
-            this.grpActions.Controls.Add(this.button5);
-            this.grpActions.Controls.Add(this.button6);
-            this.grpActions.Controls.Add(this.button3);
-            this.grpActions.Controls.Add(this.button4);
-            this.grpActions.Controls.Add(this.button2);
-            this.grpActions.Controls.Add(this.button1);
             this.grpActions.Controls.Add(this.btnStart_multi);
             this.grpActions.Controls.Add(this.btnNext);
             this.grpActions.Controls.Add(this.btnPrev);
@@ -769,7 +755,6 @@
             this.btnBath4.Name = "btnBath4";
             this.btnBath4.Size = new System.Drawing.Size(172, 146);
             this.btnBath4.TabIndex = 11;
-            this.btnBath4.Text = "Bath4";
             this.btnBath4.UseVisualStyleBackColor = false;
             // 
             // btnBath3
@@ -779,7 +764,6 @@
             this.btnBath3.Name = "btnBath3";
             this.btnBath3.Size = new System.Drawing.Size(172, 146);
             this.btnBath3.TabIndex = 10;
-            this.btnBath3.Text = "Bath3";
             this.btnBath3.UseVisualStyleBackColor = false;
             // 
             // btnBath2
@@ -789,7 +773,6 @@
             this.btnBath2.Name = "btnBath2";
             this.btnBath2.Size = new System.Drawing.Size(172, 146);
             this.btnBath2.TabIndex = 9;
-            this.btnBath2.Text = "Bath2";
             this.btnBath2.UseVisualStyleBackColor = false;
             // 
             // btnBath1
@@ -799,7 +782,6 @@
             this.btnBath1.Name = "btnBath1";
             this.btnBath1.Size = new System.Drawing.Size(172, 146);
             this.btnBath1.TabIndex = 8;
-            this.btnBath1.Text = "Bath1";
             this.btnBath1.UseVisualStyleBackColor = false;
             // 
             // btnInput
@@ -1232,7 +1214,7 @@
             // 
             this.chckJ4.AutoSize = true;
             this.chckJ4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckJ4.Location = new System.Drawing.Point(1062, 324);
+            this.chckJ4.Location = new System.Drawing.Point(1336, 277);
             this.chckJ4.Name = "chckJ4";
             this.chckJ4.Size = new System.Drawing.Size(71, 29);
             this.chckJ4.TabIndex = 68;
@@ -1243,7 +1225,7 @@
             // 
             this.chckJ3.AutoSize = true;
             this.chckJ3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckJ3.Location = new System.Drawing.Point(751, 324);
+            this.chckJ3.Location = new System.Drawing.Point(1336, 212);
             this.chckJ3.Name = "chckJ3";
             this.chckJ3.Size = new System.Drawing.Size(71, 29);
             this.chckJ3.TabIndex = 67;
@@ -1254,7 +1236,7 @@
             // 
             this.chckJ2.AutoSize = true;
             this.chckJ2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckJ2.Location = new System.Drawing.Point(430, 324);
+            this.chckJ2.Location = new System.Drawing.Point(1336, 147);
             this.chckJ2.Name = "chckJ2";
             this.chckJ2.Size = new System.Drawing.Size(71, 29);
             this.chckJ2.TabIndex = 66;
@@ -1265,7 +1247,7 @@
             // 
             this.chckJ1.AutoSize = true;
             this.chckJ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckJ1.Location = new System.Drawing.Point(131, 324);
+            this.chckJ1.Location = new System.Drawing.Point(1336, 81);
             this.chckJ1.Name = "chckJ1";
             this.chckJ1.Size = new System.Drawing.Size(71, 29);
             this.chckJ1.TabIndex = 65;
@@ -1319,7 +1301,7 @@
             // 
             this.chk24Air.AutoSize = true;
             this.chk24Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk24Air.Location = new System.Drawing.Point(976, 324);
+            this.chk24Air.Location = new System.Drawing.Point(1264, 278);
             this.chk24Air.Name = "chk24Air";
             this.chk24Air.Size = new System.Drawing.Size(66, 29);
             this.chk24Air.TabIndex = 60;
@@ -1442,7 +1424,7 @@
             // 
             this.chk23Air.AutoSize = true;
             this.chk23Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk23Air.Location = new System.Drawing.Point(650, 324);
+            this.chk23Air.Location = new System.Drawing.Point(1264, 210);
             this.chk23Air.Name = "chk23Air";
             this.chk23Air.Size = new System.Drawing.Size(66, 29);
             this.chk23Air.TabIndex = 48;
@@ -1565,7 +1547,7 @@
             // 
             this.chk22Air.AutoSize = true;
             this.chk22Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk22Air.Location = new System.Drawing.Point(332, 324);
+            this.chk22Air.Location = new System.Drawing.Point(1264, 146);
             this.chk22Air.Name = "chk22Air";
             this.chk22Air.Size = new System.Drawing.Size(66, 29);
             this.chk22Air.TabIndex = 34;
@@ -1688,7 +1670,7 @@
             // 
             this.chk21Air.AutoSize = true;
             this.chk21Air.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk21Air.Location = new System.Drawing.Point(25, 324);
+            this.chk21Air.Location = new System.Drawing.Point(1264, 80);
             this.chk21Air.Name = "chk21Air";
             this.chk21Air.Size = new System.Drawing.Size(66, 29);
             this.chk21Air.TabIndex = 22;
@@ -1971,111 +1953,50 @@
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
-            // btnTap1W1
+            // btnHeight1
             // 
-            this.btnTap1W1.Location = new System.Drawing.Point(503, 445);
-            this.btnTap1W1.Name = "btnTap1W1";
-            this.btnTap1W1.Size = new System.Drawing.Size(40, 18);
-            this.btnTap1W1.TabIndex = 58;
-            this.btnTap1W1.UseVisualStyleBackColor = true;
+            this.btnHeight1.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHeight1.Location = new System.Drawing.Point(385, 480);
+            this.btnHeight1.Name = "btnHeight1";
+            this.btnHeight1.Size = new System.Drawing.Size(172, 100);
+            this.btnHeight1.TabIndex = 60;
+            this.btnHeight1.UseVisualStyleBackColor = false;
             // 
-            // btnTap9W1
+            // btnHeight2
             // 
-            this.btnTap9W1.Location = new System.Drawing.Point(1543, 448);
-            this.btnTap9W1.Name = "btnTap9W1";
-            this.btnTap9W1.Size = new System.Drawing.Size(40, 18);
-            this.btnTap9W1.TabIndex = 59;
-            this.btnTap9W1.UseVisualStyleBackColor = true;
+            this.btnHeight2.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHeight2.Location = new System.Drawing.Point(571, 485);
+            this.btnHeight2.Name = "btnHeight2";
+            this.btnHeight2.Size = new System.Drawing.Size(172, 100);
+            this.btnHeight2.TabIndex = 61;
+            this.btnHeight2.UseVisualStyleBackColor = false;
+            // 
+            // btnHeight3
+            // 
+            this.btnHeight3.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHeight3.Location = new System.Drawing.Point(751, 486);
+            this.btnHeight3.Name = "btnHeight3";
+            this.btnHeight3.Size = new System.Drawing.Size(172, 100);
+            this.btnHeight3.TabIndex = 62;
+            this.btnHeight3.UseVisualStyleBackColor = false;
+            // 
+            // btnHeight4
+            // 
+            this.btnHeight4.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHeight4.Location = new System.Drawing.Point(929, 488);
+            this.btnHeight4.Name = "btnHeight4";
+            this.btnHeight4.Size = new System.Drawing.Size(172, 100);
+            this.btnHeight4.TabIndex = 63;
+            this.btnHeight4.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 448);
+            this.button1.Location = new System.Drawing.Point(1412, 437);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 45);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Fill 1";
+            this.button1.Size = new System.Drawing.Size(53, 45);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Air";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(72, 448);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 45);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "Drain 1";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(72, 499);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 45);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Drain 2";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(12, 499);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(54, 45);
-            this.button4.TabIndex = 35;
-            this.button4.Text = "Fill 2";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(72, 550);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 45);
-            this.button5.TabIndex = 38;
-            this.button5.Text = "Drain 3";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(12, 550);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(54, 45);
-            this.button6.TabIndex = 37;
-            this.button6.Text = "Fill 3";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(72, 601);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(81, 45);
-            this.button7.TabIndex = 40;
-            this.button7.Text = "Drain 4";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(12, 601);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(54, 45);
-            this.button8.TabIndex = 39;
-            this.button8.Text = "Fill 4";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(12, 672);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(54, 45);
-            this.button9.TabIndex = 41;
-            this.button9.Text = "Jet";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(72, 672);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(81, 45);
-            this.button10.TabIndex = 42;
-            this.button10.Text = "Foam";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -2094,8 +2015,8 @@
             this.Controls.Add(this.lblPosX);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grpMain);
             this.Controls.Add(this.grpProg);
+            this.Controls.Add(this.grpMain);
             this.Name = "Form1";
             this.Text = "ODEM1.3";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -2273,29 +2194,22 @@
         private System.Windows.Forms.Button btnTap7W2;
         private System.Windows.Forms.Button btnTap4W2;
         private System.Windows.Forms.Button btnTap1W2;
-        private System.Windows.Forms.Button btnTap9W3;
         private System.Windows.Forms.Button btnTap9W2;
         private System.Windows.Forms.Button btnTap8W1;
         private System.Windows.Forms.Button btnTap5W1;
         private System.Windows.Forms.Button btnTap3W1;
         private System.Windows.Forms.Button btnTap2W1;
         private System.Windows.Forms.Button btnTap4W1;
-        private System.Windows.Forms.Button btnTap7W3;
         private System.Windows.Forms.Button btnTap7W1;
         private System.Windows.Forms.Button btnJet;
         private System.Windows.Forms.Button btnFoam;
         private System.Windows.Forms.Button btnTap9W1;
         private System.Windows.Forms.Button btnTap1W1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHeight1;
+        private System.Windows.Forms.Button btnHeight4;
+        private System.Windows.Forms.Button btnHeight3;
+        private System.Windows.Forms.Button btnHeight2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
     }
 }
 

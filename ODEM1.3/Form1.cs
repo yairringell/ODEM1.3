@@ -21,7 +21,7 @@ namespace ODEM1._3
         double[,] single = new double[10,10];
         double[,] multi = new double[10, 50];
 
-        int machineLength, machineHeight, bathLength, bathHeight, bathGap;
+        int machineLength, machineHeight, bathLength, bathHeight, bathGap,Height1,Height2,Height3,Height4;
         int bathOn1, bathOn2, bathOn3, bathOn4, pistonOn1, pistonOn2, pistonOn3, pistonOn4;
         double xRatio, zRatio, xPos, zPos, single_prog_num, multi_prog_num;
         int screenX, screenZ;
@@ -575,65 +575,63 @@ namespace ODEM1._3
                 if (Convert.ToDouble(_ACS.ReadVariable("PISTONS2")) == 1) { btnPiston2.BackColor = Color.LightBlue; } else { btnPiston2.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("PISTONS3")) == 1) { btnPiston3.BackColor = Color.LightBlue; } else { btnPiston3.BackColor = Color.LightGray; }
                 if (Convert.ToDouble(_ACS.ReadVariable("PISTONS4")) == 1) { btnPiston4.BackColor = Color.LightBlue; } else { btnPiston4.BackColor = Color.LightGray; }
-
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN1")) == 1)     { btnSensor1.BackColor = Color.LightBlue; } else   { btnSensor1.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN2")) == 1)     { btnSensor2.BackColor = Color.LightBlue; } else   { btnSensor2.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN3")) == 1)     { btnSensor3.BackColor = Color.LightBlue; } else   { btnSensor3.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN4")) == 1)     { btnSensor4.BackColor = Color.LightBlue; } else   { btnSensor4.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN_IN")) == 1)   { btnSensorIn.BackColor = Color.LightBlue; } else  { btnSensorIn.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN_OUT")) == 1) { btnSensorOut.BackColor = Color.LightBlue; } else { btnSensorOut.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN_HOME_X")) == 1) { btnHomeX.BackColor = Color.LightBlue; } else { btnHomeX.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN_HOME_Z")) == 1) { btnHomeZ.BackColor = Color.LightBlue; } else { btnHomeZ.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN_STATION")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("SEN_BSKT")) == 1) { btnZbasket.BackColor = Color.LightBlue; } else { btnZbasket.BackColor = Color.LightGray; }
-
-                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN_Z")) == 1) { btnZbasket.BackColor = Color.LightBlue; } else { btnZbasket.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("sFORK_S")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("STATE"))<9000) { grpMain.BackColor = Color.AliceBlue; } else { grpMain.BackColor = Color.Pink; }
-
-                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN1")) ==1) { btnSensor1.BackColor = Color.LightBlue; } else { btnSensor1.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN2")) ==1) { btnSensor2.BackColor = Color.LightBlue; } else { btnSensor2.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN3")) ==1) { btnSensor3.BackColor = Color.LightBlue; } else { btnSensor3.BackColor = Color.LightGray; }
-                if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN4")) ==1) { btnSensor4.BackColor = Color.LightBlue; } else { btnSensor4.BackColor = Color.LightGray; }
-
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1.BackColor = Color.Gold; } else { btnTap1.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1W1.BackColor = Color.Blue; } else { btnTap1W1.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1W2.BackColor = Color.Blue; } else { btnTap1W2.BackColor = Color.LightGray; }
-
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2.BackColor = Color.Gold; } else { btnTap2.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2W1.BackColor = Color.Blue; } else { btnTap2W1.BackColor = Color.LightGray; }
-
-
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP3")) == 1) { btnTap3.BackColor = Color.Gold; } else { btnTap3.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP3")) == 1) { btnTap3W1.BackColor = Color.Blue; } else { btnTap3W1.BackColor = Color.LightGray; }
-
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4.BackColor = Color.Gold; } else { btnTap4.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4W1.BackColor = Color.Blue; } else { btnTap4W1.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4W2.BackColor = Color.Blue; } else { btnTap4W2.BackColor = Color.LightGray; }
-
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP5")) == 1) { btnTap5.BackColor = Color.Gold; } else { btnTap5.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP5")) == 1) { btnTap5W1.BackColor = Color.Blue; } else { btnTap5W1.BackColor = Color.LightGray; }
-
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP6")) == 1) { btnTap6.BackColor = Color.Gold; } else { btnTap6.BackColor = Color.LightGray; }
-                
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7.BackColor = Color.Gold; } else { btnTap7.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7W1.BackColor = Color.Blue; } else { btnTap7W1.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7W2.BackColor = Color.Blue; } else { btnTap7W2.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7W3.BackColor = Color.Blue; } else { btnTap7W3.BackColor = Color.LightGray; }
-
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP8")) == 1) { btnTap8.BackColor = Color.Gold; } else { btnTap8.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP8")) == 1) { btnTap8W1.BackColor = Color.Blue; } else { btnTap8W1.BackColor = Color.LightGray; }
-
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9.BackColor = Color.Gold; } else { btnTap9.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W1.BackColor = Color.Blue; } else { btnTap9W1.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W2.BackColor = Color.Blue; } else { btnTap9W2.BackColor = Color.LightGray; }
-                if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W3.BackColor = Color.Blue; } else { btnTap9W3.BackColor = Color.LightGray; }
-
+                if (true)
+                {
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN1")) == 1) { btnSensor1.BackColor = Color.LightBlue; } else { btnSensor1.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN2")) == 1) { btnSensor2.BackColor = Color.LightBlue; } else { btnSensor2.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN3")) == 1) { btnSensor3.BackColor = Color.LightBlue; } else { btnSensor3.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN4")) == 1) { btnSensor4.BackColor = Color.LightBlue; } else { btnSensor4.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN_IN")) == 1) { btnSensorIn.BackColor = Color.LightBlue; } else { btnSensorIn.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN_OUT")) == 1) { btnSensorOut.BackColor = Color.LightBlue; } else { btnSensorOut.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN_HOME_X")) == 1) { btnHomeX.BackColor = Color.LightBlue; } else { btnHomeX.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN_HOME_Z")) == 1) { btnHomeZ.BackColor = Color.LightBlue; } else { btnHomeZ.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN_STATION")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("SEN_BSKT")) == 1) { btnZbasket.BackColor = Color.LightBlue; } else { btnZbasket.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN_Z")) == 1) { btnZbasket.BackColor = Color.LightBlue; } else { btnZbasket.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("sFORK_S")) == 1) { btnSensorZ.BackColor = Color.LightBlue; } else { btnSensorZ.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("STATE")) < 9000) { grpMain.BackColor = Color.AliceBlue; } else { grpMain.BackColor = Color.Pink; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN1")) == 1) { btnSensor1.BackColor = Color.LightBlue; } else { btnSensor1.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN2")) == 1) { btnSensor2.BackColor = Color.LightBlue; } else { btnSensor2.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN3")) == 1) { btnSensor3.BackColor = Color.LightBlue; } else { btnSensor3.BackColor = Color.LightGray; }
+                    if (Convert.ToDouble(_ACS.ReadVariable("sCAGE_IN4")) == 1) { btnSensor4.BackColor = Color.LightBlue; } else { btnSensor4.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1.BackColor = Color.Gold; } else { btnTap1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1W1.BackColor = Color.Blue; } else { btnTap1W1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP1")) == 1) { btnTap1W2.BackColor = Color.Blue; } else { btnTap1W2.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2.BackColor = Color.Gold; } else { btnTap2.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP2")) == 1) { btnTap2W1.BackColor = Color.Blue; } else { btnTap2W1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP3")) == 1) { btnTap3.BackColor = Color.Gold; } else { btnTap3.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP3")) == 1) { btnTap3W1.BackColor = Color.Blue; } else { btnTap3W1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4.BackColor = Color.Gold; } else { btnTap4.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4W1.BackColor = Color.Blue; } else { btnTap4W1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP4")) == 1) { btnTap4W2.BackColor = Color.Blue; } else { btnTap4W2.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP5")) == 1) { btnTap5.BackColor = Color.Gold; } else { btnTap5.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP5")) == 1) { btnTap5W1.BackColor = Color.Blue; } else { btnTap5W1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP6")) == 1) { btnTap6.BackColor = Color.Gold; } else { btnTap6.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7.BackColor = Color.Gold; } else { btnTap7.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7W1.BackColor = Color.Blue; } else { btnTap7W1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP7")) == 1) { btnTap7W2.BackColor = Color.Blue; } else { btnTap7W2.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP8")) == 1) { btnTap8.BackColor = Color.Gold; } else { btnTap8.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP8")) == 1) { btnTap8W1.BackColor = Color.Blue; } else { btnTap8W1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9.BackColor = Color.Gold; } else { btnTap9.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W1.BackColor = Color.Blue; } else { btnTap9W1.BackColor = Color.LightGray; }
+                    if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W2.BackColor = Color.Blue; } else { btnTap9W2.BackColor = Color.LightGray; }
+                    }// TAPS
 
                 lblStation.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATION_NUM")));
                 lblError.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATE")));
 
-
+                Height1 = Convert.ToInt32(_ACS.ReadVariable("HEIGHT1"));
+                Height2 = Convert.ToInt32(_ACS.ReadVariable("HEIGHT2"));
+                Height3 = Convert.ToInt32(_ACS.ReadVariable("HEIGHT3"));
+                Height4 = Convert.ToInt32(_ACS.ReadVariable("HEIGHT4"));
+                btnHeight1.Size = new Size(bathLength, Height1);
+                btnHeight2.Size = new Size(bathLength, Height2);
+                btnHeight3.Size = new Size(bathLength, Height3);
+                btnHeight4.Size = new Size(bathLength, Height4);
+                btnHeight1.Location = new Point(cornerX + 1 * bathLength + 1 * bathGap, cornerZ + machineHeight + (100-Height1));
+                btnHeight2.Location = new Point(cornerX + 2 * bathLength + 2 * bathGap, cornerZ + machineHeight + (100 - Height2));
+                btnHeight3.Location = new Point(cornerX + 3 * bathLength + 3 * bathGap, cornerZ + machineHeight + (100 - Height3));
+                btnHeight4.Location = new Point(cornerX + 4 * bathLength + 4 * bathGap, cornerZ + machineHeight + (100 - Height4));
                 if (Homed)
                 {
                     btnZaxis.Location = new Point(cornerX + screenX - 15, cornerZ + screenZ - machineHeight + 100);// Convert.ToInt32(Axis2_FPOS)-machineHeight +30);
@@ -666,13 +664,20 @@ namespace ODEM1._3
             btnBath2.Size = new Size(bathLength, machineHeight / 2);
             btnBath3.Size = new Size(bathLength, machineHeight / 2);
             btnBath4.Size = new Size(bathLength, machineHeight / 2);
+            btnHeight1.Size = new Size(bathLength, 100);
+            btnHeight2.Size = new Size(bathLength, 100);
+            btnHeight3.Size = new Size(bathLength, 100);
+            btnHeight4.Size = new Size(bathLength, 100);
             btnInput.Location = new Point(cornerX, cornerZ + machineHeight);
             btnBath1.Location = new Point(cornerX+ 1*bathLength+1* bathGap, cornerZ + machineHeight);
             btnBath2.Location = new Point(cornerX + 2 * bathLength + 2 * bathGap, cornerZ + machineHeight);
             btnBath3.Location = new Point(cornerX + 3 * bathLength + 3 * bathGap, cornerZ + machineHeight);
             btnBath4.Location = new Point(cornerX + 4 * bathLength + 4 * bathGap, cornerZ + machineHeight);
             btnOutput.Location = new Point(cornerX + 5 * bathLength + 5 * bathGap, cornerZ + machineHeight);
-
+            btnHeight1.Location = new Point(cornerX + 1 * bathLength + 1 * bathGap, cornerZ + machineHeight);
+            btnHeight2.Location = new Point(cornerX + 2 * bathLength + 2 * bathGap, cornerZ + machineHeight);
+            btnHeight3.Location = new Point(cornerX + 3 * bathLength + 3 * bathGap, cornerZ + machineHeight);
+            btnHeight4.Location = new Point(cornerX + 4 * bathLength + 4 * bathGap, cornerZ + machineHeight);
             btnPiston1.Size = new Size(bathLength, machineHeight / 6 );
             btnPiston2.Size = new Size(bathLength, machineHeight / 6);
             btnPiston3.Size = new Size(bathLength, machineHeight / 6);
@@ -697,10 +702,10 @@ namespace ODEM1._3
             btnSensor4.Location = new Point(cornerX + 4 * bathLength + 4 * bathGap, cornerZ + machineHeight);
             btnSensorOut.Location = new Point(cornerX + 5 * bathLength + 5 * bathGap, cornerZ + machineHeight);
            
-            lblT1.Location= new Point(cornerX + 1 * bathLength + 1 * bathGap+5, cornerZ + machineHeight+90);
-            lblT2.Location = new Point(cornerX + 2 * bathLength + 2 * bathGap+5, cornerZ + machineHeight + 90);
-            lblT3.Location = new Point(cornerX + 3 * bathLength + 3 * bathGap+5, cornerZ + machineHeight + 90);
-            lblT4.Location = new Point(cornerX + 4 * bathLength + 4 * bathGap + 5, cornerZ + machineHeight + 90);
+            lblT1.Location= new Point(cornerX + 1 * bathLength + 1 * bathGap+5, cornerZ + machineHeight+100);
+            lblT2.Location = new Point(cornerX + 2 * bathLength + 2 * bathGap+5, cornerZ + machineHeight + 100);
+            lblT3.Location = new Point(cornerX + 3 * bathLength + 3 * bathGap+5, cornerZ + machineHeight + 100);
+            lblT4.Location = new Point(cornerX + 4 * bathLength + 4 * bathGap + 5, cornerZ + machineHeight + 100);
 
             btnPiston1.BackColor = Color.LightGray;
             btnPiston2.BackColor = Color.LightGray; 
