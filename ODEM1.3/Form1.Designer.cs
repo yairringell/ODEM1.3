@@ -33,6 +33,16 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.grpMain = new System.Windows.Forms.GroupBox();
+            this.btnAir = new System.Windows.Forms.Button();
+            this.btnSensor4 = new System.Windows.Forms.Button();
+            this.btnSensor3 = new System.Windows.Forms.Button();
+            this.btnSensor2 = new System.Windows.Forms.Button();
+            this.btnHeight4 = new System.Windows.Forms.Button();
+            this.btnHeight3 = new System.Windows.Forms.Button();
+            this.btnHeight2 = new System.Windows.Forms.Button();
+            this.btnSensor1 = new System.Windows.Forms.Button();
+            this.lblT1 = new System.Windows.Forms.Label();
+            this.btnHeight1 = new System.Windows.Forms.Button();
             this.btnTap9W1 = new System.Windows.Forms.Button();
             this.btnTap1W1 = new System.Windows.Forms.Button();
             this.btnFoam = new System.Windows.Forms.Button();
@@ -55,7 +65,6 @@
             this.lblT4 = new System.Windows.Forms.Label();
             this.lblT3 = new System.Windows.Forms.Label();
             this.lblT2 = new System.Windows.Forms.Label();
-            this.lblT1 = new System.Windows.Forms.Label();
             this.btnZbasket = new System.Windows.Forms.Button();
             this.grpActions = new System.Windows.Forms.GroupBox();
             this.btnStart_multi = new System.Windows.Forms.Button();
@@ -69,10 +78,6 @@
             this.btnHomeX = new System.Windows.Forms.Button();
             this.btnSensorZ = new System.Windows.Forms.Button();
             this.btnSensorOut = new System.Windows.Forms.Button();
-            this.btnSensor4 = new System.Windows.Forms.Button();
-            this.btnSensor3 = new System.Windows.Forms.Button();
-            this.btnSensor2 = new System.Windows.Forms.Button();
-            this.btnSensor1 = new System.Windows.Forms.Button();
             this.btnSensorIn = new System.Windows.Forms.Button();
             this.btnPiston4 = new System.Windows.Forms.Button();
             this.btnPiston3 = new System.Windows.Forms.Button();
@@ -194,11 +199,8 @@
             this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
-            this.btnHeight1 = new System.Windows.Forms.Button();
-            this.btnHeight2 = new System.Windows.Forms.Button();
-            this.btnHeight3 = new System.Windows.Forms.Button();
-            this.btnHeight4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUS1 = new System.Windows.Forms.Button();
+            this.btnUS2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -241,7 +243,9 @@
             // 
             // grpMain
             // 
-            this.grpMain.Controls.Add(this.button1);
+            this.grpMain.Controls.Add(this.btnUS2);
+            this.grpMain.Controls.Add(this.btnUS1);
+            this.grpMain.Controls.Add(this.btnAir);
             this.grpMain.Controls.Add(this.btnSensor4);
             this.grpMain.Controls.Add(this.btnSensor3);
             this.grpMain.Controls.Add(this.btnSensor2);
@@ -303,6 +307,95 @@
             this.grpMain.TabIndex = 1;
             this.grpMain.TabStop = false;
             // 
+            // btnAir
+            // 
+            this.btnAir.Location = new System.Drawing.Point(1412, 437);
+            this.btnAir.Name = "btnAir";
+            this.btnAir.Size = new System.Drawing.Size(53, 45);
+            this.btnAir.TabIndex = 43;
+            this.btnAir.Text = "Air";
+            this.btnAir.UseVisualStyleBackColor = true;
+            this.btnAir.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnSensor4
+            // 
+            this.btnSensor4.Location = new System.Drawing.Point(929, 439);
+            this.btnSensor4.Name = "btnSensor4";
+            this.btnSensor4.Size = new System.Drawing.Size(43, 32);
+            this.btnSensor4.TabIndex = 21;
+            this.btnSensor4.UseVisualStyleBackColor = true;
+            // 
+            // btnSensor3
+            // 
+            this.btnSensor3.Location = new System.Drawing.Point(751, 439);
+            this.btnSensor3.Name = "btnSensor3";
+            this.btnSensor3.Size = new System.Drawing.Size(43, 32);
+            this.btnSensor3.TabIndex = 20;
+            this.btnSensor3.UseVisualStyleBackColor = true;
+            // 
+            // btnSensor2
+            // 
+            this.btnSensor2.Location = new System.Drawing.Point(569, 439);
+            this.btnSensor2.Name = "btnSensor2";
+            this.btnSensor2.Size = new System.Drawing.Size(43, 32);
+            this.btnSensor2.TabIndex = 19;
+            this.btnSensor2.UseVisualStyleBackColor = true;
+            // 
+            // btnHeight4
+            // 
+            this.btnHeight4.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHeight4.Location = new System.Drawing.Point(929, 488);
+            this.btnHeight4.Name = "btnHeight4";
+            this.btnHeight4.Size = new System.Drawing.Size(172, 100);
+            this.btnHeight4.TabIndex = 63;
+            this.btnHeight4.UseVisualStyleBackColor = false;
+            // 
+            // btnHeight3
+            // 
+            this.btnHeight3.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHeight3.Location = new System.Drawing.Point(751, 486);
+            this.btnHeight3.Name = "btnHeight3";
+            this.btnHeight3.Size = new System.Drawing.Size(172, 100);
+            this.btnHeight3.TabIndex = 62;
+            this.btnHeight3.UseVisualStyleBackColor = false;
+            // 
+            // btnHeight2
+            // 
+            this.btnHeight2.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHeight2.Location = new System.Drawing.Point(571, 485);
+            this.btnHeight2.Name = "btnHeight2";
+            this.btnHeight2.Size = new System.Drawing.Size(172, 100);
+            this.btnHeight2.TabIndex = 61;
+            this.btnHeight2.UseVisualStyleBackColor = false;
+            // 
+            // btnSensor1
+            // 
+            this.btnSensor1.Location = new System.Drawing.Point(385, 439);
+            this.btnSensor1.Name = "btnSensor1";
+            this.btnSensor1.Size = new System.Drawing.Size(43, 32);
+            this.btnSensor1.TabIndex = 18;
+            this.btnSensor1.UseVisualStyleBackColor = true;
+            // 
+            // lblT1
+            // 
+            this.lblT1.AutoSize = true;
+            this.lblT1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblT1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblT1.Location = new System.Drawing.Point(397, 553);
+            this.lblT1.Name = "lblT1";
+            this.lblT1.Size = new System.Drawing.Size(23, 25);
+            this.lblT1.TabIndex = 30;
+            this.lblT1.Text = "0";
+            // 
+            // btnHeight1
+            // 
+            this.btnHeight1.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHeight1.Location = new System.Drawing.Point(385, 480);
+            this.btnHeight1.Name = "btnHeight1";
+            this.btnHeight1.Size = new System.Drawing.Size(172, 100);
+            this.btnHeight1.TabIndex = 60;
+            this.btnHeight1.UseVisualStyleBackColor = false;
+            // 
             // btnTap9W1
             // 
             this.btnTap9W1.Location = new System.Drawing.Point(1543, 448);
@@ -328,6 +421,7 @@
             this.btnFoam.TabIndex = 57;
             this.btnFoam.Text = "Foam";
             this.btnFoam.UseVisualStyleBackColor = false;
+            this.btnFoam.Click += new System.EventHandler(this.btnFoam_Click);
             // 
             // btnJet
             // 
@@ -338,6 +432,7 @@
             this.btnJet.TabIndex = 56;
             this.btnJet.Text = "JET";
             this.btnJet.UseVisualStyleBackColor = false;
+            this.btnJet.Click += new System.EventHandler(this.btnJet_Click);
             // 
             // btnTap4
             // 
@@ -519,17 +614,6 @@
             this.lblT2.TabIndex = 31;
             this.lblT2.Text = "0";
             // 
-            // lblT1
-            // 
-            this.lblT1.AutoSize = true;
-            this.lblT1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblT1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblT1.Location = new System.Drawing.Point(397, 553);
-            this.lblT1.Name = "lblT1";
-            this.lblT1.Size = new System.Drawing.Size(23, 25);
-            this.lblT1.TabIndex = 30;
-            this.lblT1.Text = "0";
-            // 
             // btnZbasket
             // 
             this.btnZbasket.Location = new System.Drawing.Point(566, 286);
@@ -658,38 +742,6 @@
             this.btnSensorOut.Size = new System.Drawing.Size(43, 32);
             this.btnSensorOut.TabIndex = 22;
             this.btnSensorOut.UseVisualStyleBackColor = true;
-            // 
-            // btnSensor4
-            // 
-            this.btnSensor4.Location = new System.Drawing.Point(929, 439);
-            this.btnSensor4.Name = "btnSensor4";
-            this.btnSensor4.Size = new System.Drawing.Size(43, 32);
-            this.btnSensor4.TabIndex = 21;
-            this.btnSensor4.UseVisualStyleBackColor = true;
-            // 
-            // btnSensor3
-            // 
-            this.btnSensor3.Location = new System.Drawing.Point(751, 439);
-            this.btnSensor3.Name = "btnSensor3";
-            this.btnSensor3.Size = new System.Drawing.Size(43, 32);
-            this.btnSensor3.TabIndex = 20;
-            this.btnSensor3.UseVisualStyleBackColor = true;
-            // 
-            // btnSensor2
-            // 
-            this.btnSensor2.Location = new System.Drawing.Point(569, 439);
-            this.btnSensor2.Name = "btnSensor2";
-            this.btnSensor2.Size = new System.Drawing.Size(43, 32);
-            this.btnSensor2.TabIndex = 19;
-            this.btnSensor2.UseVisualStyleBackColor = true;
-            // 
-            // btnSensor1
-            // 
-            this.btnSensor1.Location = new System.Drawing.Point(385, 439);
-            this.btnSensor1.Name = "btnSensor1";
-            this.btnSensor1.Size = new System.Drawing.Size(43, 32);
-            this.btnSensor1.TabIndex = 18;
-            this.btnSensor1.UseVisualStyleBackColor = true;
             // 
             // btnSensorIn
             // 
@@ -1953,50 +2005,25 @@
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
-            // btnHeight1
+            // btnUS1
             // 
-            this.btnHeight1.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnHeight1.Location = new System.Drawing.Point(385, 480);
-            this.btnHeight1.Name = "btnHeight1";
-            this.btnHeight1.Size = new System.Drawing.Size(172, 100);
-            this.btnHeight1.TabIndex = 60;
-            this.btnHeight1.UseVisualStyleBackColor = false;
+            this.btnUS1.Location = new System.Drawing.Point(503, 562);
+            this.btnUS1.Name = "btnUS1";
+            this.btnUS1.Size = new System.Drawing.Size(65, 45);
+            this.btnUS1.TabIndex = 33;
+            this.btnUS1.Text = "US1";
+            this.btnUS1.UseVisualStyleBackColor = true;
+            this.btnUS1.Click += new System.EventHandler(this.btnUS1_Click);
             // 
-            // btnHeight2
+            // btnUS2
             // 
-            this.btnHeight2.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnHeight2.Location = new System.Drawing.Point(571, 485);
-            this.btnHeight2.Name = "btnHeight2";
-            this.btnHeight2.Size = new System.Drawing.Size(172, 100);
-            this.btnHeight2.TabIndex = 61;
-            this.btnHeight2.UseVisualStyleBackColor = false;
-            // 
-            // btnHeight3
-            // 
-            this.btnHeight3.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnHeight3.Location = new System.Drawing.Point(751, 486);
-            this.btnHeight3.Name = "btnHeight3";
-            this.btnHeight3.Size = new System.Drawing.Size(172, 100);
-            this.btnHeight3.TabIndex = 62;
-            this.btnHeight3.UseVisualStyleBackColor = false;
-            // 
-            // btnHeight4
-            // 
-            this.btnHeight4.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnHeight4.Location = new System.Drawing.Point(929, 488);
-            this.btnHeight4.Name = "btnHeight4";
-            this.btnHeight4.Size = new System.Drawing.Size(172, 100);
-            this.btnHeight4.TabIndex = 63;
-            this.btnHeight4.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1412, 437);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 45);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Air";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUS2.Location = new System.Drawing.Point(781, 560);
+            this.btnUS2.Name = "btnUS2";
+            this.btnUS2.Size = new System.Drawing.Size(65, 45);
+            this.btnUS2.TabIndex = 64;
+            this.btnUS2.Text = "US2";
+            this.btnUS2.UseVisualStyleBackColor = true;
+            this.btnUS2.Click += new System.EventHandler(this.US2_Click);
             // 
             // Form1
             // 
@@ -2015,8 +2042,8 @@
             this.Controls.Add(this.lblPosX);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grpProg);
             this.Controls.Add(this.grpMain);
+            this.Controls.Add(this.grpProg);
             this.Name = "Form1";
             this.Text = "ODEM1.3";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -2209,7 +2236,9 @@
         private System.Windows.Forms.Button btnHeight4;
         private System.Windows.Forms.Button btnHeight3;
         private System.Windows.Forms.Button btnHeight2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAir;
+        private System.Windows.Forms.Button btnUS1;
+        private System.Windows.Forms.Button btnUS2;
     }
 }
 

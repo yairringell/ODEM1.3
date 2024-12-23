@@ -218,6 +218,68 @@ namespace ODEM1._3
                 _ACS.WriteVariable(1, "TAP5");
             }
         }
+
+        private void btnUS1_Click(object sender, EventArgs e)
+        {
+            if (btnUS1.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "US1");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "US1 ");
+            }
+        }
+
+        private void US2_Click(object sender, EventArgs e)
+        {
+            if (btnUS2.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "US2");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "US2");
+            }
+        }
+
+        private void btnJet_Click(object sender, EventArgs e)
+        {
+
+            if (btnJet.BackColor == Color.Lime)
+            {
+                _ACS.WriteVariable(0, "START_JET");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "START_JET");
+            }
+        }
+
+        private void btnFoam_Click(object sender, EventArgs e)
+        {
+            if (btnFoam.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "FOAM");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "FOAM");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (btnAir.BackColor == Color.Gold)
+            {
+                _ACS.WriteVariable(0, "bAIR1");
+            }
+            else
+            {
+                _ACS.WriteVariable(1, "bAIR1");
+            }
+        }
+
         private void btnTap6_Click(object sender, EventArgs e)
         {
             if (btnTap6.BackColor == Color.Gold)
@@ -616,6 +678,12 @@ namespace ODEM1._3
                     if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W1.BackColor = Color.Blue; } else { btnTap9W1.BackColor = Color.LightGray; }
                     if (Convert.ToInt16(_ACS.ReadVariable("TAP9")) == 1) { btnTap9W2.BackColor = Color.Blue; } else { btnTap9W2.BackColor = Color.LightGray; }
                     }// TAPS
+                if (Convert.ToInt16(_ACS.ReadVariable("US1")) == 1) { btnUS1.BackColor = Color.Gold; } else { btnUS1.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("US2")) == 1) { btnUS2.BackColor = Color.Gold; } else { btnUS2.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("FOAM")) == 1) { btnFoam.BackColor = Color.Gold; } else { btnFoam.BackColor = Color.LightGray; }
+                if (Convert.ToInt16(_ACS.ReadVariable("bAIR1")) == 1) { btnAir.BackColor = Color.Gold; } else { btnAir.BackColor = Color.LightGray; }
+
+                if (Convert.ToInt16(_ACS.ReadVariable("START_JET")) == 1) { btnJet.BackColor = Color.Lime; } else { btnJet.BackColor = Color.LightGray; }
 
                 lblStation.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATION_NUM")));
                 lblError.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATE")));
