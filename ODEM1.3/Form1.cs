@@ -688,6 +688,8 @@ namespace ODEM1._3
                 lblStation.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATION_NUM")));
                 lblError.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATE")));
 
+                set_error();
+
                 Height1 = Convert.ToInt32(_ACS.ReadVariable("HEIGHT1"));
                 Height2 = Convert.ToInt32(_ACS.ReadVariable("HEIGHT2"));
                 Height3 = Convert.ToInt32(_ACS.ReadVariable("HEIGHT3"));
@@ -711,7 +713,47 @@ namespace ODEM1._3
 
             }
         }
+        private void set_error()
+        {
+            switch ((Convert.ToDouble(_ACS.ReadVariable("STATE"))))
+            {
+                case 9301:  lblErrorState.Text= "NO BASKET IN STATION 1 FAILED GRAB";return;
+                case 9302: lblErrorState.Text= "NO BASKET IN STATION 2 FAILED GRAB"; return;
+                case 9303: lblErrorState.Text= "NO BASKET IN STATION 3 FAILED GRAB"; return;
+                case 9304: lblErrorState.Text= "NO BASKET IN STATION 4 FAILED GRAB"; return;
+                case 9101: lblErrorState.Text= "PISTONS CLOSED CANT GRAB"; return;
+                   
+                case 9311: lblErrorState.Text= "BASKET IN STATION 1 FAILED RELEASE"; return;
+                case 9312: lblErrorState.Text= "BASKET IN STATION 2 FAILED RELEASE"; return;
+                case 9313: lblErrorState.Text= "BASKET IN STATION 3 FAILED RELEASE"; return;
+                case 9314: lblErrorState.Text= "BASKET IN STATION 4 FAILED RELEASE"; return;
+                case 9102: lblErrorState.Text= "PISTONS CLOSED CANT RELEASE"; return;
+                   
+                case 9011: lblErrorState.Text= "- ERROR PIST 1 FWD UP"; return;
+                case 9012: lblErrorState.Text= "- ERROR PIST 1 FWD DOWN"; return;
+                case 9013: lblErrorState.Text= "- ERROR PIST 1 BWD UP"; return;
+                case 9014: lblErrorState.Text= "- ERROR PIST 1 BWD DOWN"; return;
+                   
+                case 9015: lblErrorState.Text= "- ERROR PIST 2 FWD UP"; return;
+                case 9016: lblErrorState.Text= "- ERROR PIST 2 FWD DOWN"; return;
+                case 9017: lblErrorState.Text= "- ERROR PIST 2 BWD UP"; return;
+                case 9018: lblErrorState.Text = "- ERROR PIST 2 BWD DOWN"; return;
 
+                case 9019: lblErrorState.Text= "- ERROR PIST 3 FWD UP"; return;
+                case 9020: lblErrorState.Text= "- ERROR PIST 3 FWD DOWN"; return;
+                case 9021: lblErrorState.Text= "- ERROR PIST 3 BWD UP"; return;
+                case 9022: lblErrorState.Text= "- ERROR PIST 3 BWD DOWN"; return;
+                  
+                case 9023: lblErrorState.Text= "- ERROR PIST 4 FWD UP"; return;
+                case 9024: lblErrorState.Text= "- ERROR PIST 4 FWD DOWN"; return;
+                case 9025: lblErrorState.Text= "- ERROR PIST 4 BWD UP"; return;
+                case 9026: lblErrorState.Text = "- ERROR PIST 4 BWD DOWN"; return;
+
+                default: lblErrorState.Text = ""; return;
+            }
+
+
+        }
         private void buttons()
         {
 

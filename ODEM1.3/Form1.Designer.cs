@@ -33,6 +33,8 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.grpMain = new System.Windows.Forms.GroupBox();
+            this.btnUS2 = new System.Windows.Forms.Button();
+            this.btnUS1 = new System.Windows.Forms.Button();
             this.btnAir = new System.Windows.Forms.Button();
             this.btnSensor4 = new System.Windows.Forms.Button();
             this.btnSensor3 = new System.Windows.Forms.Button();
@@ -199,8 +201,7 @@
             this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
-            this.btnUS1 = new System.Windows.Forms.Button();
-            this.btnUS2 = new System.Windows.Forms.Button();
+            this.lblErrorState = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -239,7 +240,7 @@
             this.txtIP.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIP.Size = new System.Drawing.Size(118, 24);
             this.txtIP.TabIndex = 0;
-            this.txtIP.Text = "10.0.0.100";
+            this.txtIP.Text = "192.168.120.9";
             // 
             // grpMain
             // 
@@ -306,6 +307,26 @@
             this.grpMain.Size = new System.Drawing.Size(1748, 868);
             this.grpMain.TabIndex = 1;
             this.grpMain.TabStop = false;
+            // 
+            // btnUS2
+            // 
+            this.btnUS2.Location = new System.Drawing.Point(781, 560);
+            this.btnUS2.Name = "btnUS2";
+            this.btnUS2.Size = new System.Drawing.Size(65, 45);
+            this.btnUS2.TabIndex = 64;
+            this.btnUS2.Text = "US2";
+            this.btnUS2.UseVisualStyleBackColor = true;
+            this.btnUS2.Click += new System.EventHandler(this.US2_Click);
+            // 
+            // btnUS1
+            // 
+            this.btnUS1.Location = new System.Drawing.Point(503, 562);
+            this.btnUS1.Name = "btnUS1";
+            this.btnUS1.Size = new System.Drawing.Size(65, 45);
+            this.btnUS1.TabIndex = 33;
+            this.btnUS1.Text = "US1";
+            this.btnUS1.UseVisualStyleBackColor = true;
+            this.btnUS1.Click += new System.EventHandler(this.btnUS1_Click);
             // 
             // btnAir
             // 
@@ -1851,7 +1872,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1247, 39);
+            this.label1.Location = new System.Drawing.Point(1377, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 18);
             this.label1.TabIndex = 4;
@@ -1861,7 +1882,7 @@
             // 
             this.lblPosX.AutoSize = true;
             this.lblPosX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosX.Location = new System.Drawing.Point(1332, 39);
+            this.lblPosX.Location = new System.Drawing.Point(1472, 44);
             this.lblPosX.Name = "lblPosX";
             this.lblPosX.Size = new System.Drawing.Size(16, 18);
             this.lblPosX.TabIndex = 5;
@@ -1871,7 +1892,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1410, 39);
+            this.label2.Location = new System.Drawing.Point(1533, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 18);
             this.label2.TabIndex = 6;
@@ -1881,7 +1902,7 @@
             // 
             this.lblPosZ.AutoSize = true;
             this.lblPosZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosZ.Location = new System.Drawing.Point(1494, 39);
+            this.lblPosZ.Location = new System.Drawing.Point(1617, 41);
             this.lblPosZ.Name = "lblPosZ";
             this.lblPosZ.Size = new System.Drawing.Size(16, 18);
             this.lblPosZ.TabIndex = 7;
@@ -1889,6 +1910,7 @@
             // 
             // grpButtons
             // 
+            this.grpButtons.Controls.Add(this.lblErrorState);
             this.grpButtons.Controls.Add(this.lblError);
             this.grpButtons.Controls.Add(this.label25);
             this.grpButtons.Controls.Add(this.lblStation);
@@ -1897,7 +1919,7 @@
             this.grpButtons.Controls.Add(this.label24);
             this.grpButtons.Location = new System.Drawing.Point(438, 10);
             this.grpButtons.Name = "grpButtons";
-            this.grpButtons.Size = new System.Drawing.Size(564, 73);
+            this.grpButtons.Size = new System.Drawing.Size(827, 73);
             this.grpButtons.TabIndex = 8;
             this.grpButtons.TabStop = false;
             // 
@@ -1997,33 +2019,23 @@
             // 
             // btnManual
             // 
-            this.btnManual.Location = new System.Drawing.Point(1131, 26);
+            this.btnManual.Location = new System.Drawing.Point(1271, 35);
             this.btnManual.Name = "btnManual";
-            this.btnManual.Size = new System.Drawing.Size(100, 50);
+            this.btnManual.Size = new System.Drawing.Size(100, 38);
             this.btnManual.TabIndex = 10;
             this.btnManual.Text = "Manual";
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
-            // btnUS1
+            // lblErrorState
             // 
-            this.btnUS1.Location = new System.Drawing.Point(503, 562);
-            this.btnUS1.Name = "btnUS1";
-            this.btnUS1.Size = new System.Drawing.Size(65, 45);
-            this.btnUS1.TabIndex = 33;
-            this.btnUS1.Text = "US1";
-            this.btnUS1.UseVisualStyleBackColor = true;
-            this.btnUS1.Click += new System.EventHandler(this.btnUS1_Click);
-            // 
-            // btnUS2
-            // 
-            this.btnUS2.Location = new System.Drawing.Point(781, 560);
-            this.btnUS2.Name = "btnUS2";
-            this.btnUS2.Size = new System.Drawing.Size(65, 45);
-            this.btnUS2.TabIndex = 64;
-            this.btnUS2.Text = "US2";
-            this.btnUS2.UseVisualStyleBackColor = true;
-            this.btnUS2.Click += new System.EventHandler(this.US2_Click);
+            this.lblErrorState.AutoSize = true;
+            this.lblErrorState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorState.Location = new System.Drawing.Point(460, 31);
+            this.lblErrorState.Name = "lblErrorState";
+            this.lblErrorState.Size = new System.Drawing.Size(50, 18);
+            this.lblErrorState.TabIndex = 17;
+            this.lblErrorState.Text = "Ready";
             // 
             // Form1
             // 
@@ -2239,6 +2251,7 @@
         private System.Windows.Forms.Button btnAir;
         private System.Windows.Forms.Button btnUS1;
         private System.Windows.Forms.Button btnUS2;
+        private System.Windows.Forms.Label lblErrorState;
     }
 }
 
