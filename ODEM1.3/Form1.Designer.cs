@@ -191,6 +191,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblPosZ = new System.Windows.Forms.Label();
             this.grpButtons = new System.Windows.Forms.GroupBox();
+            this.lblErrorState = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.lblStation = new System.Windows.Forms.Label();
@@ -201,7 +202,6 @@
             this.fggfgf = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
-            this.lblErrorState = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.grpMain.SuspendLayout();
             this.grpActions.SuspendLayout();
@@ -240,7 +240,7 @@
             this.txtIP.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIP.Size = new System.Drawing.Size(118, 24);
             this.txtIP.TabIndex = 0;
-            this.txtIP.Text = "192.168.120.9";
+            this.txtIP.Text = "10.0.0.100";
             // 
             // grpMain
             // 
@@ -1923,6 +1923,16 @@
             this.grpButtons.TabIndex = 8;
             this.grpButtons.TabStop = false;
             // 
+            // lblErrorState
+            // 
+            this.lblErrorState.AutoSize = true;
+            this.lblErrorState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorState.Location = new System.Drawing.Point(460, 31);
+            this.lblErrorState.Name = "lblErrorState";
+            this.lblErrorState.Size = new System.Drawing.Size(50, 18);
+            this.lblErrorState.TabIndex = 17;
+            this.lblErrorState.Text = "Ready";
+            // 
             // lblError
             // 
             this.lblError.AutoSize = true;
@@ -2026,16 +2036,6 @@
             this.btnManual.Text = "Manual";
             this.btnManual.UseVisualStyleBackColor = true;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
-            // 
-            // lblErrorState
-            // 
-            this.lblErrorState.AutoSize = true;
-            this.lblErrorState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorState.Location = new System.Drawing.Point(460, 31);
-            this.lblErrorState.Name = "lblErrorState";
-            this.lblErrorState.Size = new System.Drawing.Size(50, 18);
-            this.lblErrorState.TabIndex = 17;
-            this.lblErrorState.Text = "Ready";
             // 
             // Form1
             // 
