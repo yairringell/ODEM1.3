@@ -183,6 +183,7 @@ namespace ODEM1._3
             else
             {
                 _ACS.WriteVariable(1, "TAP2");
+                MessageBox.Show("TURN OFF HEATER 1 !!!!!!!!!!!!!  כבה מחמם אמבטיה 1");
             }
         }
         private void btnTap3_Click(object sender, EventArgs e)
@@ -194,6 +195,7 @@ namespace ODEM1._3
             else
             {
                 _ACS.WriteVariable(1, "TAP3");
+                MessageBox.Show("TURN OFF HEATER 2 !!!!!!!!!!!!!   כבה מחמם אמבטיה 2");
             }
         }
         private void btnTap4_Click(object sender, EventArgs e)
@@ -216,6 +218,7 @@ namespace ODEM1._3
             else
             {
                 _ACS.WriteVariable(1, "TAP5");
+                MessageBox.Show("TURN OFF HEATER 3 !!!!!!!!!!!!!   כבה מחמם אמבטיה 3");
             }
         }
 
@@ -311,6 +314,7 @@ namespace ODEM1._3
             else
             {
                 _ACS.WriteVariable(1, "TAP8");
+                MessageBox.Show("TURN OFF HEATER 4 !!!!!!!!!!!!!   כבה מחמם אמבטיה 4");
             }
         }
         private void btnTap9_Click(object sender, EventArgs e)
@@ -623,7 +627,14 @@ namespace ODEM1._3
                 screenX =Convert.ToInt32( xPos * xRatio) + bathLength / 2;
                 screenZ = -Convert.ToInt32(zPos * xRatio);
                 lblScreenX.Text = Convert.ToString(screenX);
-
+                if (Convert.ToDouble(_ACS.ReadVariable("BUSY"))==1)
+                {
+                    grpActions.Enabled = false;
+                }
+                else
+                {
+                    grpActions.Enabled = true;
+                }
                 TimeSpan time = TimeSpan.FromSeconds(Convert.ToDouble(_ACS.ReadVariable("T1"))*60);
                 lblT1.Text = "Time Left:   " + string.Format("{0:D2}:{1:D2}", (int)time.TotalMinutes, time.Seconds)  ;
                 time = TimeSpan.FromSeconds(Convert.ToDouble(_ACS.ReadVariable("T2")) * 60);

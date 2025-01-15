@@ -248,6 +248,7 @@
             this.grpMain.Controls.Add(this.btnUS1);
             this.grpMain.Controls.Add(this.btnAir);
             this.grpMain.Controls.Add(this.btnSensor4);
+            this.grpMain.Controls.Add(this.btnHome);
             this.grpMain.Controls.Add(this.btnSensor3);
             this.grpMain.Controls.Add(this.btnSensor2);
             this.grpMain.Controls.Add(this.btnHeight4);
@@ -874,7 +875,7 @@
             this.grpJog.Controls.Add(this.btnJogDown);
             this.grpJog.Controls.Add(this.btnJogRight);
             this.grpJog.Controls.Add(this.btnJogUp);
-            this.grpJog.Location = new System.Drawing.Point(7, 11);
+            this.grpJog.Location = new System.Drawing.Point(7, 4);
             this.grpJog.Name = "grpJog";
             this.grpJog.Size = new System.Drawing.Size(199, 108);
             this.grpJog.TabIndex = 6;
@@ -2019,9 +2020,9 @@
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(285, 24);
+            this.btnHome.Location = new System.Drawing.Point(7, 114);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(131, 50);
+            this.btnHome.Size = new System.Drawing.Size(199, 29);
             this.btnHome.TabIndex = 9;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -2046,7 +2047,6 @@
             this.Controls.Add(this.btnManual);
             this.Controls.Add(this.lblRatioX);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.fggfgf);
             this.Controls.Add(this.lblPosZ);
