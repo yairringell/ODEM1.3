@@ -114,6 +114,7 @@ namespace ODEM1._3
             _ACS.WriteVariable(1, "SINGLE_PROG_NUM");
             read_single_prog();
         }
+       
         private void btnProg2_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(2, "SINGLE_PROG_NUM");
@@ -122,6 +123,22 @@ namespace ODEM1._3
         private void btnProg3_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(3, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+        private void btnProg4_Click_1(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(4, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+        private void btnProg5_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(5, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnProg6_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(6, "SINGLE_PROG_NUM");
             read_single_prog();
         }
         private void btnPiston4_Click(object sender, EventArgs e)
@@ -152,6 +169,23 @@ namespace ODEM1._3
         private void btnProg23_Click(object sender, EventArgs e)
         {
             _ACS.WriteVariable(3, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+        private void bntProg41_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(4, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnProg51_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(5, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnProg61_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(6, "MULTI_PROG_NUM");
             read_multi_prog();
         }
         private void btnStart_multi_Click(object sender, EventArgs e)
@@ -294,6 +328,9 @@ namespace ODEM1._3
                 _ACS.WriteVariable(1, "TAP6");
             }
         }
+
+       
+
         private void btnTap7_Click(object sender, EventArgs e)
         {
             if (btnTap7.BackColor == Color.Gold)
@@ -305,6 +342,79 @@ namespace ODEM1._3
                 _ACS.WriteVariable(1, "TAP7");
             }
         }
+
+        private void btnA_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(1, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnB_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(2, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(3, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnD_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(4, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnE_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(5, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnF_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(6, "SINGLE_PROG_NUM");
+            read_single_prog();
+        }
+
+        private void btnA1_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(1, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnB1_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(2, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnC1_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(3, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnD1_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(4, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnE1_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(5, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
+        private void btnF1_Click(object sender, EventArgs e)
+        {
+            _ACS.WriteVariable(6, "MULTI_PROG_NUM");
+            read_multi_prog();
+        }
+
         private void btnTap8_Click(object sender, EventArgs e)
         {
             if (btnTap8.BackColor == Color.Gold)
@@ -351,11 +461,15 @@ namespace ODEM1._3
         }
         private void btnSetMulti_Click(object sender, EventArgs e)
         {
-             multi[((int)multi_prog_num), 1] = Convert.ToInt16(txtBathT11.Text);
+            set_multi();
+        }
+        private void set_multi()
+        {
+            multi[((int)multi_prog_num), 1] = Convert.ToInt16(txtBathT11.Text);
             multi[((int)multi_prog_num), 2] = Convert.ToInt16(txtBathT21.Text);
             multi[((int)multi_prog_num), 3] = Convert.ToInt16(txtBathT31.Text);
             multi[((int)multi_prog_num), 4] = Convert.ToInt16(txtBathT41.Text);
-            if (chk21Air.Checked)  { multi[((int)multi_prog_num), 5] = 1; } else { multi[((int)multi_prog_num), 5] = 0; }
+            if (chk21Air.Checked) { multi[((int)multi_prog_num), 5] = 1; } else { multi[((int)multi_prog_num), 5] = 0; }
             if (chkPist11.Checked) { multi[((int)multi_prog_num), 6] = 1; } else { multi[((int)multi_prog_num), 6] = 0; }
             if (chkPist21.Checked) { multi[((int)multi_prog_num), 7] = 1; } else { multi[((int)multi_prog_num), 7] = 0; }
             if (chkPist31.Checked) { multi[((int)multi_prog_num), 8] = 1; } else { multi[((int)multi_prog_num), 8] = 0; }
@@ -366,22 +480,22 @@ namespace ODEM1._3
             multi[((int)multi_prog_num), 12] = Convert.ToInt16(txtBathT22.Text);
             multi[((int)multi_prog_num), 13] = Convert.ToInt16(txtBathT32.Text);
             multi[((int)multi_prog_num), 14] = Convert.ToInt16(txtBathT42.Text);
-            if (chk22Air.Checked ) { multi[((int)multi_prog_num), 15] =1; } else { multi[((int)multi_prog_num), 15] = 0; }
-            if (chkPist12.Checked) { multi[((int)multi_prog_num), 16] =1; } else { multi[((int)multi_prog_num), 16] = 0; }
-            if (chkPist22.Checked) { multi[((int)multi_prog_num), 17] =1; } else { multi[((int)multi_prog_num), 17] = 0; }
-            if (chkPist32.Checked) { multi[((int)multi_prog_num), 18] =1; } else { multi[((int)multi_prog_num), 18] = 0; }
-            if (chkPist42.Checked) { multi[((int)multi_prog_num), 19] =1; } else { multi[((int)multi_prog_num), 19] = 0; }
+            if (chk22Air.Checked) { multi[((int)multi_prog_num), 15] = 1; } else { multi[((int)multi_prog_num), 15] = 0; }
+            if (chkPist12.Checked) { multi[((int)multi_prog_num), 16] = 1; } else { multi[((int)multi_prog_num), 16] = 0; }
+            if (chkPist22.Checked) { multi[((int)multi_prog_num), 17] = 1; } else { multi[((int)multi_prog_num), 17] = 0; }
+            if (chkPist32.Checked) { multi[((int)multi_prog_num), 18] = 1; } else { multi[((int)multi_prog_num), 18] = 0; }
+            if (chkPist42.Checked) { multi[((int)multi_prog_num), 19] = 1; } else { multi[((int)multi_prog_num), 19] = 0; }
             if (chckJ2.Checked) { multi[((int)multi_prog_num), 10] = 1; } else { multi[((int)multi_prog_num), 10] = 0; }
 
             multi[((int)multi_prog_num), 21] = Convert.ToInt16(txtBathT13.Text);
             multi[((int)multi_prog_num), 22] = Convert.ToInt16(txtBathT23.Text);
             multi[((int)multi_prog_num), 23] = Convert.ToInt16(txtBathT33.Text);
             multi[((int)multi_prog_num), 24] = Convert.ToInt16(txtBathT43.Text);
-            if (chk23Air.Checked) { multi[((int)multi_prog_num), 25] =  1; } else{ multi[((int)multi_prog_num),25] = 0; }
-            if (chkPist13.Checked) { multi[((int)multi_prog_num),26] = 1; } else { multi[((int)multi_prog_num),26] = 0; }
-            if (chkPist23.Checked) { multi[((int)multi_prog_num),27] = 1; } else { multi[((int)multi_prog_num),27] = 0; }
-            if (chkPist33.Checked) { multi[((int)multi_prog_num),28] = 1; } else { multi[((int)multi_prog_num),28] = 0; }
-            if (chkPist43.Checked) { multi[((int)multi_prog_num),29] = 1; } else { multi[((int)multi_prog_num),29] = 0; }
+            if (chk23Air.Checked) { multi[((int)multi_prog_num), 25] = 1; } else { multi[((int)multi_prog_num), 25] = 0; }
+            if (chkPist13.Checked) { multi[((int)multi_prog_num), 26] = 1; } else { multi[((int)multi_prog_num), 26] = 0; }
+            if (chkPist23.Checked) { multi[((int)multi_prog_num), 27] = 1; } else { multi[((int)multi_prog_num), 27] = 0; }
+            if (chkPist33.Checked) { multi[((int)multi_prog_num), 28] = 1; } else { multi[((int)multi_prog_num), 28] = 0; }
+            if (chkPist43.Checked) { multi[((int)multi_prog_num), 29] = 1; } else { multi[((int)multi_prog_num), 29] = 0; }
             if (chckJ3.Checked) { multi[((int)multi_prog_num), 20] = 1; } else { multi[((int)multi_prog_num), 20] = 0; }
 
             multi[((int)multi_prog_num), 31] = Convert.ToInt16(txtBathT14.Text);
@@ -389,10 +503,10 @@ namespace ODEM1._3
             multi[((int)multi_prog_num), 33] = Convert.ToInt16(txtBathT34.Text);
             multi[((int)multi_prog_num), 34] = Convert.ToInt16(txtBathT44.Text);
             if (chk24Air.Checked) { multi[((int)multi_prog_num), 35] = 1; } else { multi[((int)multi_prog_num), 35] = 0; }
-            if (chkPist14.Checked) { multi[((int)multi_prog_num),36] = 1; } else { multi[((int)multi_prog_num), 36] = 0; }
-            if (chkPist24.Checked) { multi[((int)multi_prog_num),37] = 1; } else { multi[((int)multi_prog_num), 37] = 0; }
-            if (chkPist34.Checked) { multi[((int)multi_prog_num),38] = 1; } else { multi[((int)multi_prog_num), 38] = 0; }
-            if (chkPist44.Checked) { multi[((int)multi_prog_num),39] = 1; } else { multi[((int)multi_prog_num), 39] = 0; }
+            if (chkPist14.Checked) { multi[((int)multi_prog_num), 36] = 1; } else { multi[((int)multi_prog_num), 36] = 0; }
+            if (chkPist24.Checked) { multi[((int)multi_prog_num), 37] = 1; } else { multi[((int)multi_prog_num), 37] = 0; }
+            if (chkPist34.Checked) { multi[((int)multi_prog_num), 38] = 1; } else { multi[((int)multi_prog_num), 38] = 0; }
+            if (chkPist44.Checked) { multi[((int)multi_prog_num), 39] = 1; } else { multi[((int)multi_prog_num), 39] = 0; }
             if (chckJ4.Checked) { multi[((int)multi_prog_num), 30] = 1; } else { multi[((int)multi_prog_num), 30] = 0; }
 
             _ACS.WriteVariable(multi_prog_num, "MULTI_PROG_NUM");
@@ -618,9 +732,9 @@ namespace ODEM1._3
                 if ((Axis2_MST & MotorStates.ACSC_MST_ENABLE) != 0) { btnZaxis.BackColor = Color.LightGreen; } else { btnZaxis.BackColor = Color.Gray; }
 
                 Axis1_FPOS = (double)_ACS.ReadVariable("FPOS", ProgramBuffer.ACSC_NONE, Convert.ToInt32(Axis1), Convert.ToInt32(Axis1));
-                lblPosX.Text = String.Format("{0:0.0}", Axis1_FPOS);
+                //lblPosX.Text = String.Format("{0:0.0}", Axis1_FPOS);
                 Axis2_FPOS = (double)_ACS.ReadVariable("FPOS", ProgramBuffer.ACSC_NONE, Convert.ToInt32(Axis2), Convert.ToInt32(Axis2));
-                lblPosZ.Text = String.Format("{0:0.0}", Axis2_FPOS);
+                //lblPosZ.Text = String.Format("{0:0.0}", Axis2_FPOS);
 
                 xPos = Convert.ToDouble(Axis1_FPOS);
                 zPos = Convert.ToDouble(Axis2_FPOS);
@@ -695,6 +809,33 @@ namespace ODEM1._3
                 if (Convert.ToInt16(_ACS.ReadVariable("bAIR1")) == 1) { btnAir.BackColor = Color.Gold; } else { btnAir.BackColor = Color.LightGray; }
 
                 if (Convert.ToInt16(_ACS.ReadVariable("START_JET")) == 1) { btnJet.BackColor = Color.Lime; } else { btnJet.BackColor = Color.LightGray; }
+
+                single_prog_num = Convert.ToDouble(_ACS.ReadVariable("SINGLE_PROG_NUM"));
+                if (single_prog_num == 1) { btnProg1.BackColor = Color.LightBlue; }else { btnProg1.BackColor = Color.LightGray; }
+                if (single_prog_num == 2) { btnProg2.BackColor = Color.LightBlue; } else { btnProg2.BackColor = Color.LightGray; }
+                if (single_prog_num == 3) { btnProg3.BackColor = Color.LightBlue; } else { btnProg3.BackColor = Color.LightGray; }
+                if (single_prog_num == 4) { btnProg4.BackColor = Color.LightBlue; } else { btnProg4.BackColor = Color.LightGray; }
+                if (single_prog_num == 5) { btnProg5.BackColor = Color.LightBlue; } else { btnProg5.BackColor = Color.LightGray; }
+                if (single_prog_num == 6) { btnProg6.BackColor = Color.LightBlue; } else { btnProg6.BackColor = Color.LightGray; }
+                if (single_prog_num == 1) { btnA.BackColor = Color.LightBlue; } else { btnA.BackColor = Color.LightGray; }
+                if (single_prog_num == 2) { btnB.BackColor = Color.LightBlue; } else { btnB.BackColor = Color.LightGray; }
+                if (single_prog_num == 3) { btnC.BackColor = Color.LightBlue; } else { btnC.BackColor = Color.LightGray; }
+                if (single_prog_num == 4) { btnD.BackColor = Color.LightBlue; } else { btnD.BackColor = Color.LightGray; }
+                if (single_prog_num == 5) { btnE.BackColor = Color.LightBlue; } else { btnE.BackColor = Color.LightGray; }
+                if (single_prog_num == 6) { btnF.BackColor = Color.LightBlue; } else { btnF.BackColor = Color.LightGray; }
+                multi_prog_num = Convert.ToDouble(_ACS.ReadVariable("MULTI_PROG_NUM"));
+                if (multi_prog_num == 1) { btnProg21.BackColor = Color.LightBlue; } else { btnProg21.BackColor = Color.LightGray; }
+                if (multi_prog_num == 2) { btnProg22.BackColor = Color.LightBlue; } else { btnProg22.BackColor = Color.LightGray; }
+                if (multi_prog_num == 3) { btnProg23.BackColor = Color.LightBlue; } else { btnProg23.BackColor = Color.LightGray; }
+                if (multi_prog_num == 4) { btnProg24.BackColor = Color.LightBlue; } else { btnProg24.BackColor = Color.LightGray; }
+                if (multi_prog_num == 5) { btnProg25.BackColor = Color.LightBlue; } else { btnProg25.BackColor = Color.LightGray; }
+                if (multi_prog_num == 6) { btnProg26.BackColor = Color.LightBlue; } else { btnProg26.BackColor = Color.LightGray; }
+                if (multi_prog_num == 1) { btnA1.BackColor = Color.LightBlue; } else { btnA1.BackColor = Color.LightGray; }
+                if (multi_prog_num == 2) { btnB1.BackColor = Color.LightBlue; } else { btnB1.BackColor = Color.LightGray; }
+                if (multi_prog_num == 3) { btnC1.BackColor = Color.LightBlue; } else { btnC1.BackColor = Color.LightGray; }
+                if (multi_prog_num == 4) { btnD1.BackColor = Color.LightBlue; } else { btnD1.BackColor = Color.LightGray; }
+                if (multi_prog_num == 5) { btnE1.BackColor = Color.LightBlue; } else { btnE1.BackColor = Color.LightGray; }
+                if (multi_prog_num == 6) { btnF1.BackColor = Color.LightBlue; } else { btnF1.BackColor = Color.LightGray; }
 
                 lblStation.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATION_NUM")));
                 lblError.Text = Convert.ToString(Convert.ToDouble(_ACS.ReadVariable("STATE")));
@@ -842,11 +983,7 @@ namespace ODEM1._3
             single = resault as double[,];
             single_prog_num = Convert.ToDouble (_ACS.ReadVariable("SINGLE_PROG_NUM"));
             
-            if (single_prog_num==1) { btnProg1.BackColor = Color.LightBlue; btnProg2.BackColor = Color.LightGray; btnProg3.BackColor = Color.LightGray; }
-            if (single_prog_num == 2) { btnProg1.BackColor = Color.LightGray; btnProg2.BackColor = Color.LightBlue; btnProg3.BackColor = Color.LightGray; }
-            if (single_prog_num == 3) { btnProg1.BackColor = Color.LightGray; btnProg2.BackColor = Color.LightGray; btnProg3.BackColor = Color.LightBlue; }
-
-
+            
             txtBathT1.Text = Convert.ToString(single[((int)single_prog_num), 1]);
             txtBathT2.Text = Convert.ToString(single[((int)single_prog_num), 2]);
             txtBathT3.Text = Convert.ToString(single[((int)single_prog_num), 3]);
@@ -866,10 +1003,7 @@ namespace ODEM1._3
             multi = resault_multi as double[,];
             multi_prog_num = Convert.ToDouble(_ACS.ReadVariable("MULTI_PROG_NUM"));
 
-            if (multi_prog_num == 1) { btnProg21.BackColor = Color.LightBlue; btnProg22.BackColor = Color.LightGray; btnProg23.BackColor = Color.LightGray; }
-            if (multi_prog_num == 2) { btnProg21.BackColor = Color.LightGray; btnProg22.BackColor = Color.LightBlue; btnProg23.BackColor = Color.LightGray; }
-            if (multi_prog_num == 3) { btnProg21.BackColor = Color.LightGray; btnProg22.BackColor = Color.LightGray; btnProg23.BackColor = Color.LightBlue; }
-
+            
 
             txtBathT11.Text = Convert.ToString(multi[((int)multi_prog_num), 1]);
             txtBathT21.Text = Convert.ToString(multi[((int)multi_prog_num), 2]);
