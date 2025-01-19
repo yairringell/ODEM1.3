@@ -41,7 +41,7 @@ namespace ODEM1._3
             WindowState = FormWindowState.Maximized;
             machineLength = this.Size.Width - 300;
             xRatio = Convert.ToDouble(machineLength) / 3825000; //3295000;
-            lblRatioX.Text= Convert.ToString(xRatio);
+            //lblRatioX.Text= Convert.ToString(xRatio);
             machineHeight = machineLength / 5;
             bathGap = 10;//machineLength / 20;
             bathLength = machineLength / 6 - (bathGap );
@@ -61,8 +61,32 @@ namespace ODEM1._3
 
             
             buttons();
-           
+            connection();
 
+        }
+        private void connection()
+        {
+            while (btnConnect.BackColor != Color.LightGreen)
+            {
+                try
+                {
+                    _ACS.OpenCommEthernetTCP("192.168.120.17",
+                               // txtIP.Text,                             // IP Address (Default : 10.0.0.100)
+                                701   // TCP/IP Port nubmer (default : 701)
+                                );
+                    btnConnect.BackColor = Color.LightGreen;
+                    btnHome.Enabled = true;
+                    read_single_prog();
+                    read_multi_prog();
+
+
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //System.Diagnostics.Debug.WriteLine(ex.Message);
+                }
+            }
         }
         private void btnPiston1_Click(object sender, EventArgs e)
         {
@@ -543,23 +567,26 @@ namespace ODEM1._3
 
             if (btnConnect.BackColor == Color.Gray)
             {
-                try
-                {
-                    _ACS.OpenCommEthernetTCP(
-                                txtIP.Text,                             // IP Address (Default : 10.0.0.100)
-                                701   // TCP/IP Port nubmer (default : 701)
-                                );
-                    btnConnect.BackColor = Color.LightGreen;
-                    btnHome.Enabled = true;
-                    read_single_prog();
-                    read_multi_prog();
+                while (btnConnect.BackColor != Color.LightGreen)
+                { 
+                    try
+                    {
+                        _ACS.OpenCommEthernetTCP(
+                                    txtIP.Text,                             // IP Address (Default : 10.0.0.100)
+                                    701   // TCP/IP Port nubmer (default : 701)
+                                    );
+                        btnConnect.BackColor = Color.LightGreen;
+                        btnHome.Enabled = true;
+                        read_single_prog();
+                        read_multi_prog();
 
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    System.Diagnostics.Debug.WriteLine(ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        System.Diagnostics.Debug.WriteLine(ex.Message);
+                    }
                 }
             }
         }
@@ -740,7 +767,7 @@ namespace ODEM1._3
                 zPos = Convert.ToDouble(Axis2_FPOS);
                 screenX =Convert.ToInt32( xPos * xRatio) + bathLength / 2;
                 screenZ = -Convert.ToInt32(zPos * xRatio);
-                lblScreenX.Text = Convert.ToString(screenX);
+                //lblScreenX.Text = Convert.ToString(screenX);
                 if (Convert.ToDouble(_ACS.ReadVariable("BUSY"))==1)
                 {
                     grpActions.Enabled = false;
